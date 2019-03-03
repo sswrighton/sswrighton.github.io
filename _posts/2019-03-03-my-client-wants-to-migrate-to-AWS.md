@@ -2,7 +2,7 @@
 layout: post
 title:  "My Client Wants to Migrate to AWS"
 date: "2019-03-03 13:22:00"
-updated: "2019-03-03 15:30:00"
+updated: "2019-03-03 15:45:00"
 permalink: "/2019/03/my-client-wants-to-migrate-to-aws.html"
 description: 
 categories: [blog, AWS]
