@@ -3,11 +3,36 @@ author: sswrighton
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Yet more Geek ruminations to clutter up the internets.
+about: >
+    Programming life
 
-# social links
-twitter_username: kidananubix
-github_username:  sswrighton
+
+master_repo: false
+url: "http://vinitkumar.me/white-paper"
+markdown: kramdown
+highlighter: rouge
+
+plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
+
+paginate: 4
+
+
+rtl: false
+owner:
+  name:           whitepaper
+  avatar:         "https://avatars1.githubusercontent.com/u/537678?s=240&v=4"
+  email:          "vinit1414.08@bitmesra.ac.in"
+  # Social networking links used in footer. Update and remove as you like.
+  twitter: vinitkme
+  github: https://github.com/vinitkumar
+  stackexchange: https://stackoverflow.com/users/859112/vinit-kumar?tab=profile
+  linkedin: https://www.linkedin.com/in/vinitatlinkedin
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:
+
+# Analytics and webmaster tools stuff goes here
+google_analytics: UA-1739066-2
 
 show_excerpts: true # set to false to remove excerpts on the homepage
 
-theme: minima
+
