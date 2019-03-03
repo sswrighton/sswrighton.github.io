@@ -1,8 +1,16 @@
 ---
 layout: post
 title:  "My Client Wants to Migrate to AWS"
+date: "2019-03-03 13:22:00"
+updated: "2019-03-03 15:30:00"
+permalink: "/2019/03/my-client-wants-to-migrate-to-aws.html"
+description: 
 categories: [blog, AWS]
 tags: [hosting, AWS, Cloud]
+author: 
+    name: "Stephen Wrighton"
+    url: "https://github.com/sswrighton"
+    image: "https://www.gravatar.com/avatar/53a4066fb888b4a54fa1e650945e34a8?s=64&d=identicon&r=PG"
 ---
 
 ##My Client Wants to Migrate to AWS
