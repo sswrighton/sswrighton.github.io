@@ -1,8 +1,8 @@
-
 ---
 layout: default
 title: A Programmer's Dream
 ---
+
 <div class="listing">
     {% for post in paginator.posts %}
     <div class="post other link">
