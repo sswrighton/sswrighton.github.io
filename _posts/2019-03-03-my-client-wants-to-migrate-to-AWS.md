@@ -2,7 +2,7 @@
 layout: post
 title:  "My Client Wants to Migrate to AWS"
 date: "2019-03-03 13:22:00"
-updated: "2019-03-03 15:45:00"
+updated: "2019-03-03 15:46:00"
 permalink: "/2019/03/my-client-wants-to-migrate-to-aws.html"
 description: 
 categories: [blog, AWS]
@@ -51,13 +51,13 @@ The thing is that AWS' biggest success is not its IaaS tools or services. It's n
 
 Because whether or not it's true, my clients believe it. 
 
-***Ease of Use ***
+**Ease of Use**
 
 The best example for ease of use is I took an icon quiz regarding the AWS dashboard (https://docs.google.com/forms/d/e/1FAIpQLSdnEEo0o2JgnIt8VOGffhkcYj-C2h9m5_NFzM0Q1AU-P8d0zA/viewform). I got a 2.  Now, I know that I'm not the smartest person around and I don't typically interact with cloud provider solutions, but I have been doing this for 15 years professionally. I've been programming off and on since the fourth grade; which is more years than I really want to consider right now. And I got a 2.  All I have to say is that you best hope that dashboard comes with tool-tips, as there is an order of magnitude difference in the costs between some of the services hiding behind these icons; ones that look eerily the same. 
 
 The other thing is try to use their price calculator. You have to spend hours researching to determine the specific infrastructure/services you need to host your solution. I think I did it right to emulate an existing infrastructure for an application (website + 65 databases for each geographically zoned user base), but that ended up with an estimated $125,000/month bill.  And yes, that's a comma with three zeroes after it.  I'm still not certain if I did it right (or if there was a better way) or not. Let me rephrase: what I configured in the estimator would work, but I don't know if there could be a better configuration. That's not exactly an ease-of-use concept there. And all of that is just estimating and working with the tools; not actually doing anything. 
 
-***Ultra-Reliable ***
+**Ultra-Reliable**
 
 This gets me.  AWS has a lot of claims about reliability. You see a lot of discussion about 11 9's and 4 9's.  My favorite is that 11 9's one. Their claim is that they had a storage durability of 99.999999999%. 
 
@@ -68,7 +68,7 @@ Which is a massive claim, and in the 6 years since that claim was made, it's bee
 
 But that's storage. Their claims about availability is for four 9's (99.99%).  At least that's the marketers. Legal says that AWS users can't complain (and won't receive financial breaks) until reliability drops beneath two 9's.  I mean those 2 extra 9s are the difference between 9 seconds of downtime per day and 15 minutes of downtime per day.  But even their availability isn't perfect (https://www.readitquik.com/articles/cloud-3/top-7-aws-outages-that-wreaked-havoc/). They have outages, and because they are the biggest IaaS provider on the block, their outages effect many more businesses and consumers. 
 
-***Low cost ***
+**Low cost**
 
 Of course we need to consider the cost of things here.  And frankly, I despise phrases like low-cost.  They are so imprecise, and ultimately meaningless without any surrounding context. For example, if I'm stuck on a train track, and there's a train coming. I would consider losing a foot a low-cost for evading the train.  By the same token, if I step on a nail, get an infection and lose that foot, that's not a low-cost to stepping on a nail.  Context is important. 
 
@@ -82,7 +82,7 @@ The other thing to consider is that this low cost, has costs. Storage costs on t
 
 And let's not even start about the cost of support, which for businesses starts at 10% of your monthly bill or $100 whichever is greater. Or the Enterprise level support starts at 10% of your monthly bill or $15,000 whichever is greater. 
 
-***The Bottom Line ***
+**The Bottom Line**
 
 AWS is not the evil bogeyman.  It does a good job at what it does.  But if you have a system that's working, doing its job and doing it successfully. If your system is not even being phased by the thousands of attacks committed against it monthly. If your system is up consistently and when expected. If you are getting quick, efficient support at a phone call as part of your hosting package. Then maybe, just maybe, you shouldn't consider switching. 
 
