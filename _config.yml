@@ -20,13 +20,13 @@ paginate: 4
 rtl: false
 owner:
   name:           whitepaper
-  avatar:         "https://avatars1.githubusercontent.com/u/537678?s=240&v=4"
-  email:          "vinit1414.08@bitmesra.ac.in"
+  avatar:         "https://www.gravatar.com/avatar/53a4066fb888b4a54fa1e650945e34a8?s=64&d=identicon&r=PG"
+  email:          "sswrighton@gmail.com"
   # Social networking links used in footer. Update and remove as you like.
-  twitter: vinitkme
-  github: https://github.com/vinitkumar
-  stackexchange: https://stackoverflow.com/users/859112/vinit-kumar?tab=profile
-  linkedin: https://www.linkedin.com/in/vinitatlinkedin
+  twitter: sswrighton
+  github: https://github.com/sswrighton
+  stackexchange: https://stackoverflow.com/users/7516/stephen-wrighton
+  linkedin: https://www.linkedin.com/in/sswrighton
   # For Google Authorship https://plus.google.com/authorship
   google_plus:
 
