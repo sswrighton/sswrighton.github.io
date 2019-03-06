@@ -1,0 +1,15 @@
+---
+layout: post
+title: Failures in Ajax
+date: '2008-06-23T08:58:00.003-05:00'
+author: Stephen Wrighton
+tags:
+- JavaScript
+- AJAX
+- Web
+modified_time: '2008-06-23T09:04:23.851-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-8959151225762708663
+blogger_orig_url: https://programmer.wrighton.org/2008/06/failures-in-ajax.html
+---
+
+I use the Prototype JavaScript library a lot.<br /><br />Of course a prime use of the library is its AJAX functionality. I like it, and prefer it immensely over the Microsoft implementation found in AJAX.NET.<br /><br />There is one issue though--and it's a documentation issue. Mainly, the Prototype JS API documentation does not clearly state how to view the error message one would receive on a FAILURE.<br /><br />Since I primarily use this blog as a place to store things that I may need again in the future, here's the relevant code:<br /><blockquote>function failure (transport){alert(transport.responseText); }</blockquote>Amusingly, simple, no?<br /><br />The parameter passed in is your standard AJAX RESPONSE object from the Prototype library, so you have a number of other options that you can utilize outside of just the <span style="font-weight: bold;">responseText</span>. In fact it's the exact same object passed to the success methods and all the other callback methods that are exposed via the AJAX REQUEST method.

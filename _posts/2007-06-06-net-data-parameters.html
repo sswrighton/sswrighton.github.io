@@ -1,0 +1,16 @@
+---
+layout: post
+title: ".NET Data Parameters"
+date: '2007-06-06T12:30:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- Oracle
+- Coding
+- strings
+modified_time: '2007-06-06T12:38:05.841-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7229192179907597977
+blogger_orig_url: https://programmer.wrighton.org/2007/06/net-data-parameters.html
+---
+
+so, we're working on this application, and its backend is an Oracle database, as I've been harping on for a week or two now. Anyways, we're utilizing packages and parameter lists because, well, it's Oracle, and the folks that designed the thing want every single data access to be via a stored procedure.<br /><br />I can live with it.<br /><br />Well, I've been playing with things, and discovered a slight flaw in the .NET to Oracle relationship. If I pass an empty string or a string without any characters to it, I get an error back from Oracle.<br /><br />So, basically, if I have a text field and I enter a just a space, and then trim the value from that text field as I set it as the value of the data parameter I will get a hard crash.<br /><br />Same as if the user leaves a text field blank.<br /><br />This is the exception being reported by .NET:<br /><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;;"><i><span style="color: rgb(153, 51, 0);"></span><blockquote><span style="color: rgb(153, 51, 0);">Parameter 'teacher': No size set for variable length data type: String</span>.</blockquote><span style="font-style: italic;"><span style="font-style: italic;"><span style="font-style: italic;"><span style="font-style: italic;"></span></span></span></span></i><i><span style="font-style: italic;"><span style="font-style: italic;"><span style="font-style: italic;"><span style="font-style: italic;"></span></span></span></span></i></span>Why it would not accept the empty string, or even assume a NULL value I'm not certain.  So I tried to provide default values, and apparently the parameter is overriding the default value as I get the same error.<br /><br />Anyways, what I'm having to do is add a space to the values from the text field and then trim that value before I use it in the stored procedure.<br /><br />And it gets better.<br /><br />I can't reassign a value to the parameters, because they're all IN parameters by default. I guess I could change them to IN/OUT but that's a lot of hassle. So I'm having to do the trims every time I use the variable in the stored procedure.<br /><br />This is just so much easier in SQL Server...

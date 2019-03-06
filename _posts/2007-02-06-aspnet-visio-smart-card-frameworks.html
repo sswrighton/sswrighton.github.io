@@ -1,0 +1,18 @@
+---
+layout: post
+title: ASP.NET Visio & Smart Card Frameworks.
+date: '2007-02-06T07:50:00.000-06:00'
+author: Stephen Wrighton
+tags:
+- Link
+- ".NET"
+- programming
+- VB.Net
+- ASP.Net
+- Architecture
+modified_time: '2007-02-06T08:01:55.036-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-500918628896586394
+blogger_orig_url: https://programmer.wrighton.org/2007/02/aspnet-visio-smart-card-frameworks.html
+---
+
+I came across a nifty new custom control in my RSS feeds this morning . An <a href="http://www.c-sharpcorner.com/UploadFile/scottlysle/CC_Visio01142007140634PM/CC_Visio.aspx">ASP.NET 2.0 Visio Custom Control</a>. I was expecting some low level programming, utilization of the .NET graphics capabilities, in general the generation of images, based on the data found within a Visio file.<br /><br />After all, that's what I think when you say custom control - you're building this to display some information or perform some task.<br /><br />What the article describes though, is the use of the Visio Viewer within IE. So rather than building a custom control which accepts a Visio file as a backend, this is a wrapper for a call to the Visio Viewer ActiveX.<br /><br />I know, it sounds like I'm being anal. Well it's actually a very large semantical difference and has massive issues with usage, mainly that ActiveX controls are only supported on IE.<br /><br />But I have found some very, very interesting articles on CodeProject. They are a series of articles describing classes and libraries that can be used to access SmartCards. I'm currently working on a project which deals with Smart Cards so I'm hoping that this can be useful in ensuring that I can use entirely Managed Code as opposed to a mixed bag of managed and unmanaged that is currently in the works.<br /><br />Even better is that their is an article on using the code on the .NET Compact Framework - which means I might be able to convince the boss to let me build the application for a PDA.<br /><br /><br />Links:<br /><ul><li><a href="http://www.c-sharpcorner.com/UploadFile/scottlysle/CC_Visio01142007140634PM/CC_Visio.aspx">ASP.NET 2.0 Visio Custom Control</a></li><li><a href="http://www.codeproject.com/smartclient/SmartcardFmwk.asp">Smart Card XML Framework for .NET</a></li><li><a href="http://www.codeproject.com/smartclient/smartcardapi.asp">Smart Card Framework for .NET</a></li><li><a href="http://www.codeproject.com/netcf//pocketscardfmwk.asp">Smart Card Framework for .NET Compact Framework</a></li></ul>

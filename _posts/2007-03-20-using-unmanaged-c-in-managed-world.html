@@ -1,0 +1,18 @@
+---
+layout: post
+title: Using unmanaged C in a managed world
+date: '2007-03-20T21:07:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- C++
+- programming
+- VB.Net
+- Coding
+- C#
+modified_time: '2007-03-21T09:18:16.385-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-4184797696822446511
+blogger_orig_url: https://programmer.wrighton.org/2007/03/using-unmanaged-c-in-managed-world.html
+---
+
+I'm having a problem.<br /><br />And it's a dozy.<br /><br />My company is working with some Norwegians to produce a product - and we're making a software bit of it, utilizing libraries that they created.<br /><br />Sounds reasonable so far.<br /><br />Well, we're a .NET shop - and more specifically a VB.Net shop. While I was big on C++ in college, those days are long past. Nearly everything I need to do, can be done in VB. And for those odd bits that are left over, I usually employ C#.<br /><br />Well, this library which we're having to use is built in C.<br /><br />Without classes. Without structures. Without the STD.<br /><br />For example, there's a function with this declaration in the header file:<br /><blockquote><span style="color: rgb(51, 51, 255);">short </span>SW_getVersion(<span style="color: rgb(51, 51, 255);">char</span>* version);<br /></blockquote><br />As you might have guessed - the short that the function returns just tells us if the function was successful or not. The actual data we care about is being passed through that char pointer.<br /><br />Beautiful huh?<br /><br />Actually, it's not that bad. Or at least it wasn't until I started trying to use it in the managed world of .NET.<br /><br />My first attempts in C#/C++ .NET 2.0 met with the unreasonable compiler error that libcd.lib was no longer supported. Since that was compiled directly into the library's I could do nothing.<br /><br />So I went down to .NET 1.1.<br /><br />It compiled, and i tried to link the DLL into my VB.Net front end - and quickly discovered that none of the functions which used c-style strings were accessible.<br /><br />So, I went and started writing wrapper functions for the library functions which returned managed classes filled with relevant data. Which is when I discovered that managed code does not like talking to unmanaged code.<br /><br />First C#, despite having the "UNSAFE" flag really doesn't do it. It's only, truly, possible to work in managed/unmanaged code side-by-side in C++.<br /><br /><span style="font-style: italic;">No Big deal,</span> I thought. After all, C++ was the language we used in college.<br /><br />Famous last words. I'm now on day three of this fiasco, and am just beginning to get to a point where I can use the function listed above.  Yet, I'm still not certain if I'm building these things correctly. Which means that I'm spending a whole bunch of time doing research on MarshalAs, IntPtr and P/Invoke. <br /><br />And trying my best to figure out where the CString class is stored, so I can use the proper library to try playing with that.<br /><br />Good times. :|

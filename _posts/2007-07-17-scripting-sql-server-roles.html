@@ -1,0 +1,15 @@
+---
+layout: post
+title: Scripting SQL Server Roles
+date: '2007-07-17T09:32:00.001-05:00'
+author: Stephen Wrighton
+tags:
+- programming
+- Coding
+- SQL Server
+modified_time: '2007-07-17T09:41:10.996-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7911347241562951468
+blogger_orig_url: https://programmer.wrighton.org/2007/07/scripting-sql-server-roles.html
+---
+
+For our prime contract, we have multiple applications all using the same database. We choose this schema because there is some information that is shared among all these applications, and rather than having it duplicated, we decided to just shove it all into the same place. Additionally, we have users tacked onto the databases, for each application which owns the objects of that application. <br /><br />This allows us to have two tables named the same, but schema'd out to the application. For example, the EPB.Documents table and the ELETA.Documents table. While they are named the same, they serve distinctly different purposes.  The EPB.Documents table is the meta data for the documents which EPB generates. The ELETA.Documents table is attribute data for documents displayed by ELETA. <br /><br />Little things like that.<br /><br />Anyways, in addition to all of that, we use Roles to control access to the application. For example there is an EPBUser role and a ELETAUser role. This means that we can quickly assign access to the db user to those elements which each application needs to function.<br /><br />The problem comes in with generating SQL script files for backup/configuration/deployment purposes. 2000's Enterprise Manager has no support for scripting the role to a file or a query window.  2005's SQL Server Studio does, but it only scripts the creation of that role, not all the underlying permissions.<br /><br />So, I hunted the internet and found <a href="http://www.sql-server-performance.com/bm_object_permission_scripts.asp">this</a>. What this does is displays just what attributes a user or a role has (there are 2 scripts on that link, the top one is for users the bottom for roles).<br /><br />I grabbed it, plugged the name of my role in, and within seconds I had a nice batch of GRANT statements which the role needs to run the application.

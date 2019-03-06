@@ -1,0 +1,17 @@
+---
+layout: post
+title: Installing and Launching Applications
+date: '2008-09-03T23:53:00.001-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- C++
+- programming
+- Software
+- C#
+modified_time: '2008-09-03T23:53:01.119-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-3097280614611872415
+blogger_orig_url: https://programmer.wrighton.org/2008/09/installing-and-launching-applications.html
+---
+
+So, one of my myriad projects I have going on is a run-once and forget about it application which modifies the resolution order for Outlook Address books (fun stuff, I know).  Forget the fact that this is evil MAPI and C++ stuff (made even eviler via Vista), and also deals with the arcane Outlook COM objects in C#, I got it working.<br /><br />After a number of hours of smacking my head against the wall, I got it working.<br /><br />Well, as a final bit, the client requested that it install and then run and that's all it needs to do.<br /><br />My initial thought was, let's just drop it into the START folder under the program list, and have it run every time the system reboots. The client didn't want this, as all he wanted was a run once and never have to bother with again type of thing.<br /><br />Well, Aaron Stebner has a solution which actives that "Run this application" checkbox in the MSI system, which can be found <a href="http://blogs.msdn.com/astebner/archive/2006/08/12/696833.aspx">here</a>.<br /><br />Which was almost what I wanted. The problem there is that I want to FORCE the application to run EVERY TIME it is installed.<br /><br />Which led me to this CodeProject article: <a href="http://www.codeproject.com/KB/cs/Installation.aspx">Launching your application after install using Visual Studio 2005</a>. Outside of the circular reference to my first link, and the fact that the title is slightly misleading, this does exactly what I want.<br /><br />Which is launch the application AFTER the install, but prior to the INSTALLATION wizard finishing.<br /><br />Which makes me happy, the client happy, and the world just that much of a better place for everyone involved.<br /><br />Good times.

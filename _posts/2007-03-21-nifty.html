@@ -1,0 +1,16 @@
+---
+layout: post
+title: Nifty!
+date: '2007-03-21T23:46:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- User Interface
+- programming
+- ASP.Net
+- Web
+modified_time: '2007-03-21T23:55:34.302-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7934258616178756848
+blogger_orig_url: https://programmer.wrighton.org/2007/03/nifty.html
+---
+
+My freelance project has shifted from being a windows rich-client application to a web-based application. There are various reasons for this shift, among them the desire to have the ability to secure the application against misuse, ease of pushing out updates to the application and then centralizing the system in general.<br /><br />While the rich-client world offers a lot of fun things, the application itself can be built utilizing the .NET Framework and AJAX to deliver a nearly seamless user experience that almost rivals a traditional rich-client application.<br /><br />Of course, because it's a shift in paradigms, things have to be built differently, we need a different style of UI, we need user management, and a few other odds and ends which aren't necessary on a rich-client application.<br /><br />Understandable, and I estimated between two to three weeks to get the application back to the point it was at in the rich-client environment.<br /><br />Of course, none of that is the point of this article.<br /><br />What I'm here to talk about is the UI itself. The design I went with is something very similar to the UI elements of GMail or Google Reader (and thousands of other websites out there as well). There's a left hand navigation which provides menu options for the game itself. There's a nav bar at the top of the screen for options relevant to the users - and less relevant as far as the prime functionality of the application. And then there's a content area.<br /><br />The left nav and content areas I wanted to use boxes with rounded corners.<br /><br />But I didn't want to spend time building those boxes in GIMP.<br /><br />So, I did what any sensible person would do and turned to Google hunting for a CSS/JavaScript based solution to give me my rounded corners.<br /><br />And that's where <a href="http://www.html.it/articoli/nifty/index.html">Nifty</a> comes in.<br /><br />Three files (a screen CSS, a print CSS and a JavaScript file), a few modifications to my main style sheet and then a couple lines of JavaScript in the body of the .Master page and I have my rounded corners.<br /><br />Nifty.

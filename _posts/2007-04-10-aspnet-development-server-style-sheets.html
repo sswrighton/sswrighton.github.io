@@ -1,0 +1,17 @@
+---
+layout: post
+title: ASP.Net Development Server & Style Sheets
+date: '2007-04-10T14:22:00.001-05:00'
+author: Stephen Wrighton
+tags:
+- Microsoft
+- CSS
+- ".NET"
+- ASP.Net
+- Web
+modified_time: '2007-04-10T14:22:26.831-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-1573707407613494278
+blogger_orig_url: https://programmer.wrighton.org/2007/04/aspnet-development-server-style-sheets.html
+---
+
+I'm developing my freelance web application using Visual Web Developer Express at the house. And though I do have a full fledged Web Server running IIS I could develop on, I prefer having the actual development being done on my box and then I routinely push the changes out to the website so that my partner can view a stable version of the software.<br /><br />Not a big issue. It's a good paradigm.<br /><br />Well it would be, except for whatever reason, the built-in development server is reporting that my style sheets have a mime type of <span style="font-weight: bold;">TEXT/HTML</span> rather than <span style="font-weight: bold;">TEXT/CSS</span>. The friendly Error Console in FireFox is reporting this:<br /><br /><blockquote style="color: rgb(153, 0, 0);">Error: The stylesheet http://localhost:2877/Lotto/login.aspx?ReturnUrl=%2fLotto%2fcorners.css was not loaded because its MIME type, "text/html", is not "text/css".<br />Source File: http://localhost:2877/Lotto/login.aspx?ReturnUrl=%2fLotto%2fdefault.aspx<br />Line: 0</blockquote>And while once you get logged into the system, it's not a problem - prior to that, when <span style="font-weight: bold;">TEXT/HTML</span> files are restricted, it means that none of my pretty styles are showing up for the login screen. And it's not just the VWDE that I'm using at home - it's also my Visual Studio Professional at work. At lunch the other day, I tried it and came up with the same results of CSS being misreported as the wrong MIME type.<br /><br />And it gets better. Even external JavaScript files are doing something flaky:<br /><br /><blockquote style="color: rgb(153, 0, 0);">Error: syntax error<br />Source File: http://localhost:2877/Lotto/includes/prototype.js<br />Line: 3<br />Source Code:<br /></blockquote>Google, Asp.Net, MSDN and Google Groups are, of course, utterly unhelpful with this particular issue.<br /><br />Of course, while I was building my little blog entry here, I realized what was truly happening.<br /><br />I had disabled the ability for things to be retrieved from the web server without authentication. Which meant, any request prior to the user being logged into the system would be met with the login prompt. Which meant that I was trying to load in my LOGIN page in my style sheet & script tags.<br /><br />It's at times like these that I feel utterly brilliant.<br /><br />Anyways, moving my stylesheets to my INCLUDES folder and then adding in the following to my web.config solved my problem.<br /><blockquote><pre><br />&lt;location path="Includes"><br />  &lt;system.web><br />    &lt;authorization><br />      &lt;allow users="*"><br />    &lt;/allow><br />  &lt;/authorization><br />&lt;/system.web><br />&lt;/location></pre></blockquote><br />Now, if only I had the time I spent trying to figure this out back. Though I guess, that's what I get for not paying close enough attention to the message that Error Console is reporting to me.

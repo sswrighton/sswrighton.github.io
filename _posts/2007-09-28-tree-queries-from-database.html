@@ -1,0 +1,15 @@
+---
+layout: post
+title: Tree Queries from the Database
+date: '2007-09-28T14:30:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- Oracle
+- programming
+- SQL Server
+modified_time: '2007-09-28T14:39:30.623-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7735887396716578092
+blogger_orig_url: https://programmer.wrighton.org/2007/09/tree-queries-from-database.html
+---
+
+Okay, I've stumbled onto an odd problem. Our System Analyst here at Techsoft is an Oracle guy. He does all these things in Oracle, and then expects us to carry out similar activities in our applications and in SQL SERVER.<br /><br />Usually it's not a problem.<br /><br />Oh, but when it is....<br /><br />He created a table, and populated it in both the Oracle and SQL Server versions of our database. It contained ID, CODE, Name, Description and PARENT_ID columns, and basically was designed to store/output hierarchical data, like you'd find in a TREE control.<br /><br />Yeah.<br /><br />So, I spent a good half-hour banging my head, trying to figure out how to generate a SQL statement that would produce the relevant datasource in an easy to use format.  So I went to the guy who knows more about SQL Server than me. While we're hashing out possibilities, in walks Mr. Oracle. He seemed to think it was no problem, and produced this ORACLE query:<br /><p class="MsoNormal"><span style="font-family:Courier New;font-size:130%;"><span style="font-size: 14pt; font-family: 'Courier New';"></span></span></p><blockquote>  <p class="MsoNormal"><span style="font-family:Courier New;font-size:130%;"><span style="font-size: 14pt; font-family: 'Courier New';">Select LPad ( ' ', 2 * (  Level - 1 ) ) || Code Code, Name, Description<br />From  JCA<br />Start With ID =  0<br />Connect by Parent_ID = Prior  ID;</span></span><br /><span style="font-family:Courier New;font-size:130%;"><span style="font-size: 14pt; font-family: 'Courier New';"><o:p></o:p></span></span></p></blockquote> <p class="MsoNormal">Yeah, and that's where I really started banging my head. LPAD doesn't exist in Transact SQL. Nor does CONNECT BY, and I have my reservations about START WITH.<span style="font-family:Courier New;font-size:130%;"><span style="font-size: 14pt; font-family: 'Courier New';"><br /><o:p></o:p></span></span></p>Of course, what annoys me the most is the misleading GROUP BY.  Despite the name, GROUP BY does not group things. It aggregates things. It's an important difference which gives me migraines. If I wanted to aggregate things, I'd look for a function called AGGREGATE BY.  If there's a clause called GROUP BY I would expect it to group things according to the column I pass in.  After all, that's the way it would work in a programming language.<br /><br />But nooo... this is databases... :|<br /><br /><br /><br />Okay, my rant is over, no to once more try to figure out the TSQL version of that evil ORACLE query.

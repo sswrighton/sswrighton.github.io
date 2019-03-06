@@ -1,0 +1,14 @@
+---
+layout: post
+title: Elbow Deep In Oracle...
+date: '2007-05-17T08:30:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- Oracle
+- SQL Server
+modified_time: '2007-05-17T08:39:06.143-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-8120044682106401612
+blogger_orig_url: https://programmer.wrighton.org/2007/05/elbow-deep-in-oracle.html
+---
+
+My company is a MS shop. We use .NET and SQL Server on almost every project. It's the standard development environment that we keep.<br /><br />So of course, we have a client that wants an Oracle backend.<br /><br />So all day yesterday I was tripping over the differences between SQL Server (and Transact-SQL) and Oracle.  <br /><br />And there's a lot of little things that one can trip over. Such as:<br /><ul><li>Using := instead of = for assignments</li><li>Packages (and the @ command to run them)</li><li>That whole output from Stored Procedures thing</li><li>Using END IF rather than BEGIN/END around IF logic blocks</li><li>ELSIF rather than ELSE IF</li></ul><br />And those are just the ones off the top of my head. I think what makes it the worst is the fact that ultimately they are so close to one another. It's like the difference between Java and C++. There's just enough similarities in the syntax to confuse you when you're switching back and forth between them.<br /><br />Oh well, it's back to writing stored procedures for me.

@@ -1,0 +1,15 @@
+---
+layout: post
+title: CBR, CBZ and maybe something new
+date: '2008-09-18T16:29:00.005-05:00'
+author: Stephen Wrighton
+tags:
+- programming
+- eComic
+modified_time: '2008-09-18T20:29:36.525-05:00'
+thumbnail: http://3.bp.blogspot.com/_0dC8-RtLatg/SNMAYJBNCTI/AAAAAAAAAZM/Rk_w6IhflrU/s72-c/gnzschema.PNG
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-4202824102236509157
+blogger_orig_url: https://programmer.wrighton.org/2008/09/cbr-cbz-and-maybe-something-new.html
+---
+
+I can admit, I'm having fun with <a href="http://www.codeplex.com/ecomic/">eComic</a>. But that's neither here nor there. Currently, I support opening <span style="font-weight: bold;">CBR </span>and <span style="font-weight: bold;">CBZ </span>files, which are fundamentally <span style="font-weight: bold;">RAR</span> and <span style="font-weight: bold;">ZIP</span> files respectively. For the record, CDisplay, the initial program that dealt with these things had 4 file formats: CBR, CBZ, CBT, CBA, which corresponded to RAR, ZIP, TAR and ACE files.<br /><p>The thing that makes a <span style="font-weight: bold;">CB#</span> file a <span style="font-weight: bold;">CB#</span> file, is that it is filled with images, and possibly a "Notes.txt" file. It's not a complicated file paradigm--which I do like.<br /><br />Now, making them is relatively easy. You stick all the files you want in the CB# in a folder, and then zip or rar or tar or ace it up. Rename the file extension and you got yourself a file.<br /><br />Bad news is that you've GOT to have them name in something sequential. Much the same way that the CB# file itself needs to be named sequentially in order for CDisplay to find the next thing to be read.<br /><br />So, my thought was to have eComic create a new file type. Let's call it GNZ. Now the GNZ will fundamentally be a CBR file. Except the Notes.txt will be replaced with a Manifest.xml file.<br /><br />The Manifest.xml file will have something along the lines for a schema:<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_0dC8-RtLatg/SNMAYJBNCTI/AAAAAAAAAZM/Rk_w6IhflrU/s1600-h/gnzschema.PNG"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://3.bp.blogspot.com/_0dC8-RtLatg/SNMAYJBNCTI/AAAAAAAAAZM/Rk_w6IhflrU/s320/gnzschema.PNG" alt="" id="BLOGGER_PHOTO_ID_5247538405554587954" border="0" /></a></p>Note two things of interest for the new file type:<br /><ol><li>The images are given an order that they should be displayed in</li><li>The note information is stored, and give a format (types can be RTF, HTML or TEXT)</li></ol>... maybe I'm just too pleased with myself.

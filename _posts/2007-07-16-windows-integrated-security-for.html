@@ -1,0 +1,19 @@
+---
+layout: post
+title: Windows Integrated Security for Websites...
+date: '2007-07-16T09:41:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- programming
+- VB.Net
+- ASP.Net
+- Coding
+- Usability
+- Web
+modified_time: '2007-07-16T10:28:59.842-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-8751172580635501704
+blogger_orig_url: https://programmer.wrighton.org/2007/07/windows-integrated-security-for.html
+---
+
+A lot of our websites that we build for our prime contract have anonymous access turned off, and integrated Windows security turned on. What this means is that when you try to hit the site, you get the Network username/password prompt box, where you have to enter your username/password for the domain. Not that big of a deal, it's easy security to implement, and we don't have to deal with generating passwords, and it's one less password for the user to remember. Additionally, if you're on their network and using IE, then the authentication process is transparent for the user.<br /><br />Up until now, we had been using a server variable and then session variables to store the username. In fact this is the exact code we used from the Session_Start function of Global.ASAX:<br /><blockquote> Session("User") = Trim(Request.ServerVariables("LOGON_USER")).Replace("/", "\").Replace("'", "''")<br />        Session("User") = CStr(Session("User")).Substring(CStr(Session("User")).LastIndexOf("\") + 1)</blockquote>Not the most beautiful code in existence, but it did what we needed. It got the network username from the server and stuck it in a place where we could use it.<br /><br />Of course I hated that code. It annoyed me because it was a hack. Enforced psuedo-authentication. What is worse, is that it didn't use the Page.User functionality.<br /><br />So, we got a new project from that prime contract, and I was pondering how I could get that LOGON_USER ServerVariable into Page.User. So a bit of research, and I came up with some new code. First, the retreival of the LOGON_USER moved from Session_Start to Application_AuthenticateRequest. Then I added this code to that method:<br /><blockquote> Dim username As String<br />        username = Trim(Request.ServerVariables("LOGON_USER")).Replace("/", "\").Replace("'", "''")<br />        username = username.Substring(username.LastIndexOf("\") + 1)<br /><br />        System.Web.Security.FormsAuthentication.SetAuthCookie(username, False)<br /><br />        Dim id As New System.Security.Principal.GenericIdentity(username)<br />        Dim p As New System.Security.Principal.GenericPrincipal(id, getUserApplicationRoles(username))<br />        HttpContext.Current.User = p</blockquote>What this does is retrieves the username from the server variable, uses that username to generate the authentication cookie so that the PAGE object knows about the authentication, and then generates the GenericIdentity and Generic Princpal objects necessary for Page.User functionality.<br /><br />The final bit of usefulness would be the getUserApplicationRoles function which returns an array of strings, and basically gets the roles associated to the passed in user for our application.<br /><br />So, we still use the server's security, but we now have access to Page.User.Identity.Name  and Page.User.IsInRole.  And I'm happy.

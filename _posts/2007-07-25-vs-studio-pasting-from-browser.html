@@ -1,0 +1,17 @@
+---
+layout: post
+title: VS Studio pasting from the browser
+date: '2007-07-25T09:51:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- JavaScript
+- Microsoft
+- ".NET"
+- Usability
+- Web
+modified_time: '2007-07-25T10:10:48.897-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-5160751811730684113
+blogger_orig_url: https://programmer.wrighton.org/2007/07/vs-studio-pasting-from-browser.html
+---
+
+I'm working on this little project, and I needed a modal window system. So I did a little searching and stumbled upon <a href="http://prototype-window.xilinus.com/">Prototype Window</a>. It's released under the same MIT license as the Prototype JS library.<br /><br />That's all good. But, I'm also using a bit of JSON in this particular application, so I want to make sure that I have the latest Prototype because that's where the JSON functionality is built in at. So, I go to the PrototypeJS.org site, hit the download page and then copy from there the text for the JS file.<br /><br />I happily go over to VS and paste that text into my JS file and hit the site.<br /><br />Where everything proceeds to throw up. Over and over again.<br /><br />After searching all the code that I had written, trying to figure out what was going on, I finally open up my local copy of Prototype.js - the one I had just pasted into, and right there at the top is a nice big old: &lt;pre>.<br /><br />... <span style="font-style: italic; color: rgb(0, 102, 0);"><-- that's me smacking my head against the desk</span><br /><br />And then I remembered that most hated of VS 'features' the fact that it tries to paste text copied with formatting attributes, with those formatting attributes translated into HTML.<br /><br />Which means you'll get a bunch of MS Word junk when you paste from MS Word, and a bunch of HTML junk when you paste from a browser.<br /><br />I can see the usefulness of such a thing, but it should not be the default setting. Or at least it should be configurable as a default setting or not.<br /><br />I believe it's fixed in VS 2005, as I don't seem to remember having that headache when working on a site in it earlier this year.<br /><br />Well, that's my story of my own stupidity for the day. Enjoy.

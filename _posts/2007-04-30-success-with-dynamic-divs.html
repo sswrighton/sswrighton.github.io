@@ -1,0 +1,16 @@
+---
+layout: post
+title: Success with the Dynamic Divs
+date: '2007-04-30T22:44:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- JavaScript
+- AJAX
+- Software
+- Web
+modified_time: '2007-04-30T22:47:37.899-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-842624521768922478
+blogger_orig_url: https://programmer.wrighton.org/2007/04/success-with-dynamic-divs.html
+---
+
+Well at least partly. The last post here, I was complaining about the behavior of my drag/drop divs which I created from data returned from the web server. Well the Firefox behavior is still there and annoying.<br /><br />But the IE behavior I seem to have figured out.<br /><br />I was using the command DIV.setAttribute("class", "MyDivClass"); to set the class attribute. That command works in Firefox - but apparently not in IE. IE requires DIV.className = "MyDivClass";.<br /><br />Just one of those small annoyances which is the difference between IE and Mozilla browsers. Frankly, I'm scared to open the site in Opera to see what happens.

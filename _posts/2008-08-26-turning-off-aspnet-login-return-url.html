@@ -1,0 +1,16 @@
+---
+layout: post
+title: Turning off ASP.NET LOGIN RETURN URL ability
+date: '2008-08-26T23:45:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- Interface
+- ".NET"
+- ASP.Net
+- Web
+modified_time: '2008-08-26T23:45:00.342-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7921685715601571076
+blogger_orig_url: https://programmer.wrighton.org/2008/08/turning-off-aspnet-login-return-url.html
+---
+
+A standard part of the way that the LOGIN controls work in .NET is that they append the RETURN URL to the query string, and when you successfully log into the application, they drop you back right where you were.<br /><br />Which makes sense if you're knee deep in an application when you lose your authentication ticket for some reason.<br /><br />But, what happens when you don't want that behavior. How do you make it where the application always sends you to the default page regardless of  where the user had been.<br /><br />Fun, eh?<br /><br />Basically, what must occur is that you'll need to handle an event from the LOGIN control, called LOGGEDIN.  When handling this event, it then becomes a simple matter of redirecting the user to the default page of the website.  What's produced looks like this:<br /><br /><blockquote>Protected Sub Login1_LoggedIn(ByVal sender As Object, ByVal e As System.EventArgs) Handles Login1.LoggedIn<br />        Response.Redirect("./")<br /> End Sub <br /></blockquote><br />Simplicity in action, once you catch on.

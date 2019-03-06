@@ -1,0 +1,15 @@
+---
+layout: post
+title: JC App take 2
+date: '2008-12-08T23:37:00.003-06:00'
+author: Stephen Wrighton
+tags:
+- programming
+- WPF
+- JC PM
+modified_time: '2008-12-08T23:43:27.896-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-3999525648876672782
+blogger_orig_url: https://programmer.wrighton.org/2008/12/jc-app-take-2.html
+---
+
+Well, after a bit of an issue on the little application I tossed together to deal with PM Lists over at the forums for TheForce.Net, I quickly got another version of it cobbled together and out to Codeplex (available <a href="http://www.codeplex.com/JCPMList/Release/ProjectReleases.aspx?ReleaseId=20318">here</a>).<br /><br />Now, what issues you may ask?  Well, first and foremost, was an installation error having to deal with an IEFrame.dll dependency (which I assume was from WATIN). Of secondary concern I had left a message box in there, which spat out the name during every pass of sending a PM.<br /><br />But, I've got those dealt with (at least I didn't receive errors when installing), and I also made a few extra modifications to the little application.  The Version change Log is thus:<br /><span id="ctl00_ctl00_MasterContent_Content_ReleasePanelOrderingContainer_ReleaseDescriptionLiteral"><ul><li>Fixed Installer Issue</li><li>Added option to hide the browser window while app is working</li><li>Turned app into multi-threaded application</li><li>Cleaned up the Source code</li><li>Added a "waiting" animation while process is running</li></ul></span>It's nice and simple, and hopefully easy to use.

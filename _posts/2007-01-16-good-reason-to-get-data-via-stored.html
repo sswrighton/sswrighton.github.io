@@ -1,0 +1,13 @@
+---
+layout: post
+title: A good reason to get data via Stored Procedures.
+date: '2007-01-16T14:27:00.000-06:00'
+author: Stephen Wrighton
+tags:
+- Coding
+modified_time: '2007-01-16T14:31:55.503-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7062829085299641091
+blogger_orig_url: https://programmer.wrighton.org/2007/01/good-reason-to-get-data-via-stored.html
+---
+
+And that reason is, poorly designed databases.<br /><br />I have a simple survey application. It's database has two tables (a models table and a results table) and the website itself has only two pages. The survey and the results page.<br /><br />It worked great, until the market folks decided to change the models which are being surveyed under. When that happen, guess who was stuck having to make changes. Of course I can't just remove the existing models, because that means you wouldn't be able to see the results for those models. <br /><br />So after I added in a logical deletion bit to the models table, I then had to go in and rebuild the web application to filter based on the deletion bit. It's not complicated, but it's a matter of finding the source code, making the changes, recompiling and then re-deploying. Time consuming and frustrating more than problematic. Of course if I had used Stored Procedures (or even VIEWS) to populate the various pages then I could have just made a few extra changes in the database and been done with it.<br /><br />Oh well. I've probably not learned my lesson though.

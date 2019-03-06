@@ -1,0 +1,17 @@
+---
+layout: post
+title: Sometimes I Wonder...
+date: '2009-04-30T22:40:00.002-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- Consulting
+- Software
+- Misc
+modified_time: '2009-04-30T22:40:00.721-05:00'
+thumbnail: http://4.bp.blogspot.com/_0dC8-RtLatg/SfnypT5v9hI/AAAAAAAAA14/sWDf12LgPpA/s72-c/poornaming.png
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-259408072518615132
+blogger_orig_url: https://programmer.wrighton.org/2009/04/sometimes-i-wonder.html
+---
+
+You know, I sometimes wonder about the intellectual capabilities of some of my peers.  Specifically, my peers in the programming/software industry. Or at least their Marketing Masters.<br /><br />The reason I wonder is that on occasion, you'll get things just named stupidly. Utterly, and hopelessly stupidly.<br /><br />A while back, one of my friends passed a contact to me that needed some help fixing his website. He had gotten it built, and then the development company he had used more or less disappeared on him.  So, I got his issues straightened out, and his site was back in business, and he was happy.<br /><br />Fast forward just under two years to this evening. I got a call from him, and it appears that his site was experiencing some major issues. For whatever reason, ASP.NET was not loading the DLLs it needed to run, and that was throwing configuration errors, and stopping processing on that yellow-screen of annoyance that anyone who has developed in ASP.NET has seen at least once.<br /><br />The first thing I did was FTP into the server to ensure that the DLLs still existed, which they did.  Then I checked on ensuring that the web.config file was well formed (though if it wasn't it wouldn't have worked ~20 months ago when I was working on it).<br /><br />Finally, deciding that maybe the DLLs in question had just gotten corrupted or expired or something, I found the first one, named FreeTextBox.dll and went hunting.  It didn't take long for Google to turn up the results, at which time, I found myself kind of staring at the screen in abject... flabergastion.<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_0dC8-RtLatg/SfnypT5v9hI/AAAAAAAAA14/sWDf12LgPpA/s1600-h/poornaming.png"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 186px; height: 200px;" src="http://4.bp.blogspot.com/_0dC8-RtLatg/SfnypT5v9hI/AAAAAAAAA14/sWDf12LgPpA/s200/poornaming.png" alt="" id="BLOGGER_PHOTO_ID_5330558425500743186" border="0" /></a>The reason why is captured there in that image perfectly.<br /><br />This is a product named <span style="font-weight: bold;">Free</span>TextBox with the tagline "The no. 1 <span style="font-weight: bold;">free</span> ASP.NET HTML Editor."<br /><br />And then you have two different licenses that you can purchase to legally use this control, one costing roughly $50 and the other $200.<br /><br />Now sure, the thing is a free download, and it's only "extra" features that you're getting when you get a license, but you've got to really read the website to discover that particular salient factoid.<br /><br />Just the sheer... gumption one has to charge for a product who uses FREE in its very name is just... astounding.<br /><br />Ah well, I'm off to see if I can track down the cause of those missing DLLs...

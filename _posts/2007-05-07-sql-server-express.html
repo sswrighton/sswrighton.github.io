@@ -1,0 +1,15 @@
+---
+layout: post
+title: SQL Server Express
+date: '2007-05-07T13:32:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- Microsoft
+- ".NET"
+- SQL Server
+modified_time: '2007-05-07T13:40:49.651-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7575152399391737828
+blogger_orig_url: https://programmer.wrighton.org/2007/05/sql-server-express.html
+---
+
+As I noted in my last post, I inherited a new pc from a co-worker who quit. A beautifully quiet machine.<br /><br />Well, at lunch the other day, I decided to do a little work on my freelance project. Not that big of a deal, it's an ASP.NET 2.0 website, and I keep a copy of all the data structures in a SQL Server Express database for development purposes.  That way, I have my development system with me all the time (on a thumbdrive) and I don't have to worry about using my employer's bandwidth if I do work on it at lunch.<br /><br />Imagine my surprise when I went to launch the thing in debug mode and it immediately collapses in error on a DropDownList's databind call.<br /><br />So, I went home, it launched perfectly from home and everything worked perfectly.<br /><br />Now, I was really confused. Well, I have a project I'm working on which uses a SQL Express database as a datastore. And lo and behold it fails to launch as well.<br /><br />Getting angry, I tried to open the server up in the SQL Management tool only to get shot down there by some arcane error message.<br /><br />And that's when I remembered that the machine was probably set up under my co-workers account. Which means that his corporate account is the one with permissions to the SQL Server running on this box. I have yet to test my theory (which as far as I can tell means uninstalling and then reinstalling the SQL Server 2005 toolset.<br /><br />If anyone else out there has any other ideas on what can be done, I'll happily listen to them, as it will probably be Friday at the earliest before I have a chance to deal with this problem (the joys of getting ramped up on currently ongoing projects - even if you're one of the ones that laid the groundwork for the system).

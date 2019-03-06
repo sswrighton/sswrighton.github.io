@@ -1,0 +1,18 @@
+---
+layout: post
+title: AJAX.Net & The Freelance Project...
+date: '2007-11-16T08:18:00.000-06:00'
+author: Stephen Wrighton
+tags:
+- JavaScript
+- ".NET"
+- AJAX
+- ASP.Net
+- Coding
+- Web
+modified_time: '2007-11-16T08:32:28.028-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-5716905506295209726
+blogger_orig_url: https://programmer.wrighton.org/2007/11/ajaxnet-freelance-project.html
+---
+
+I've been steadily plugging away at my freelance project that I've been working on for way too long now. Luckily, my partner/customer in this endeavor is quite understanding of the time involved in caring for young children and life in general.  Luckily, I've managed to make a number of updates to the back-end processing that makes front end processing much easier.   Basically, there are a number of things where I was doing some rather heavy calculations for every call, that I didn't need to be making.<br /><br />For example, the state of a element. This state changes every time more elements are added into the collection, so I can't just give an element a single state when I load that element and be done with it.  At the same time, a lot of calls are taken up with calculating that particular state at other times during the life-cycle of the process.  Well, my solution was to have a table in the database which records the element and its current state, and create a stored procedure which can be ran to recalculate those states.  Also, I'll soon be sending that data down to the page code as a JSON variable so that I won't need to make some of the calls to the web server while playing with elements not in the initial data set.<br /><br />Basically, a foo object can have 36 elements, but approximately only 18-25 of those elements will come down with the initial retrieval of foo attributes. It's all part of the processing to determine what is displayed that way. Anyways, if I want to include one of those elements that aren't in that initial set in my output, the current process is that I tell the web page, it builds the div for displaying the element, and then sends off a request to the web service backend to get its state. Sure, I'm not doing that a whole lot, but if I can kill a call to the web service, that makes the process just that much faster, because we don't have to wait on the round trip time.<br /><br />Of course, now that I've got my backend updated, I'm facing some odd issues with the front end. The front end is heavy in JS and CSS because, well it just is. I have the Prototype and        script.aculo.us libraries in play, and then it is also a AJAX.Net site. This means it's spitting out a whole bunch of JS.  Anyways, my issue is that when I load the site from the testing web server, it's not displaying the elements. Other attributes are changing, but the elements aren't.  Oddly, this behavior isn't being replicated on my development box.<br /><br />I'm not sure if it's an AJAX.Net issue or a Prototype issue.  Or something else altogether. Somewhat annoying if you ask me.

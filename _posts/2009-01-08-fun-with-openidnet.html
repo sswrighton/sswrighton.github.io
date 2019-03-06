@@ -1,0 +1,16 @@
+---
+layout: post
+title: Fun with OpenId.Net
+date: '2009-01-08T21:44:00.002-06:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- ASP.Net
+- Coding
+- Web
+modified_time: '2009-01-08T21:44:00.673-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-556317077539667054
+blogger_orig_url: https://programmer.wrighton.org/2009/01/fun-with-openidnet.html
+---
+
+As I said last night, I'm slapping together something new, but this time it is a ASP.Net website (yeah, go me!). I also stated that I utilized two new technologies (for me at least) in the building of this website; after yesterday's love fest over Linq, I figured it was time to talk about OpenId.<br /><br />I use OpenId, and I try to use it everywhere I can. Stack Overflow is probably the most obvious, and often, of my usages of it. So, while building this new thing of mine, I figured I would make use of it. <br /><br />After all, most folks <span style="font-weight: bold; font-style: italic;">HAVE </span>an OpenId even if they're not aware of that particular fact.  Google, Blogger, AOL and LiveJournal are all OpenId providers.<br /><br />The main reason I wanted to use OpenId is because I just didn't want the hassles of keeping track of usernames, passwords and the like. It's messy, and just not something I want to be doing.  OpenId allows me the best of both worlds. I can hide things from unauthorized and unauthenticated users while at the same time, not have to worry about tracking people's passwords.<br /><br />And let's be honest, so many folks use the same password across multiple sites, that that's a degree of security for myself that I'm more than happy to take.<br /><br />Now, comes the ubiquitous issues in regards to how I'm consuming an OpenId provider. The answer to that is i'm using <a href="http://code.google.com/p/dotnetopenid/">DotNetOpenID</a>. This implementation has a Relying Partner, and a Provider examples; which means that you can turn any .NET website into an OpenID Provider.<br /><br />Me, I opted out of that particular hassle, again, because I don't want any of that nonsense relating to keeping up with who is who.<br /><br />What is better is that alongside of Linq, I can easily generate new User objects for my datastore (which allows for custom Display Names, signatures, etc.,) in a nearly transparent fashion for the users. I love that all they have to do is log in, and then they are good to go.

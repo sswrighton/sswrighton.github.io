@@ -1,0 +1,17 @@
+---
+layout: post
+title: Plugin Architecture for .NET
+date: '2007-01-19T19:35:00.000-06:00'
+author: Stephen Wrighton
+tags:
+- Microsoft
+- ".NET"
+- programming
+- VB.Net
+- Architecture
+modified_time: '2007-01-19T19:51:28.619-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-167442339573809752
+blogger_orig_url: https://programmer.wrighton.org/2007/01/plugin-architecture-for-net.html
+---
+
+I've used <a href="http://msdn.microsoft.com/msdnmag/issues/03/10/Plug-Ins/default.aspx">this</a> architecture for building a plug-in system for .Net 1.1 in the past. I liked it, it stored the information about the various DLL's in the application configuration file. Using reflection and a custom configurationHandler one is able to load in the classes at run time.<br /><br />Of course, I'm building an application using .Net 2.0 and have run into a system where a pluggable architecture makes sense and would be very useful. Well one of the improvements of .Net 2.0 over 1.1 is the modification of how information is stored and accessed in the configuration file.<br /><br />Oh, the annoyances.<br /><br />Well after a bit of searching, I found this article on <a href="http://msdn.microsoft.com/msdnmag/issues/03/10/Plug-Ins/default.aspx">dynamically searching for a plug-in</a>. Basically, it's looking in the application path for any DLL's which have a class that implements the interface that someone is looking for. While, I like the thought of having the information about the classes in a configuration file which I can instantiate using  the System.Reflection. But in a pinch, this will work as well.

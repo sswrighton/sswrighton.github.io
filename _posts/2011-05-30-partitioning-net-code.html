@@ -1,0 +1,17 @@
+---
+layout: post
+title: Partitioning .NET code…
+date: '2011-05-30T14:13:00.001-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- Visual Studio
+- VB.Net
+- ASP.Net
+- Architecture
+modified_time: '2011-05-30T14:13:47.100-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-2791814378463127251
+blogger_orig_url: https://programmer.wrighton.org/2011/05/partitioning-net-code.html
+---
+
+<p>CodeBetter.com has an article up currently on <a href="http://codebetter.com/patricksmacchia/2011/05/30/on-partitionning-net-code/" target="_blank">Partitioning .NET code</a>, an issue which I'm intrigued with, and had recently had to actually do. </p>  <p>My thing was, that the company I work for, has a rather large framework system in place for a lot of our development efforts, especially where intranets are concerned. I was adding functionality to this system, and started having troubles keeping track of my efforts. </p>  <p>I mean, there were a number of aspects that this system had going on:</p>  <ul>   <li>HTTP Modules (entirely code based, and defined in the WEB.Config as opposed to ashx-style handlers)</li>    <li>Worker classes</li>    <li>Security </li>    <li>Data Layer</li>    <li>Sandboxes for the home page</li>    <li>Interfaces project for custom additions to the system</li> </ul>  <p>This was in addition to the base web-forms (things like the home page, the master page, content pages, administration pages, calendar pages, etc.), and the add-ins for specific clients (recently a client wanted a new sandbox which displayed a random image from a selected list of images that had been uploaded into the application).</p>  <p>Now, originally, I had two projects. The first was the framework, and the second was the interface project. This &quot;worked&quot; but it was hard to grok in its entirety.&#160; This was mainly because there were just so many moving parts to the thing.</p>  <p>So, I did what I felt was the most reasonably solution, I yanked it apart into discrete bits of functional DLLs. Then, I took those DLLs and broke them into logical Namespaces. For example, I have a number of HTTP modules in the system. Two of the categories that they can be broken into is serving images or serving other files from the database.&#160; To handle this, I added a FILE namespace and an IMAGE namespace into the .HttpModules namespace of my library project.</p>  <p>What all this means is that I have a number of library projects for the core functionality that hides in the system, and those DLLs are then broken up into Namespaces around specifics types of those core functionalities. </p>  <p>This works, since I have two ways to extend this project. I can either use stand-alone DLLs, that are instantiated at run-time, or I can use a second project which uses ASCX files that again, I can load in at run-time.</p>  <p>But, the important thing from my point of view, is that I can easily determine where a code object belongs in my core-package. This makes new development, bug fixes and testing much easier. And, I'm also not loading a bunch of classes into the memory space unless absolutely necessarily. </p>  <p>The only thing with how dynamic this whole system ultimately is, is that it's actually hard to test from within the VS IDE. I have to deploy the projects to a test web-server in order to fully access all of its disparate parts. But, that's more of the fact that objects are being late-bound into the application, rather than any thing to do with the partitions into separate DLLs. </p>  

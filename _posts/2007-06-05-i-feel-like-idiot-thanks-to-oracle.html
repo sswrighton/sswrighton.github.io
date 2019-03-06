@@ -1,0 +1,15 @@
+---
+layout: post
+title: I feel like an idiot thanks to Oracle Stored Procedure parameters
+date: '2007-06-05T10:41:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- Oracle
+- Coding
+- Usability
+modified_time: '2007-06-05T10:48:08.974-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-959249343306862838
+blogger_orig_url: https://programmer.wrighton.org/2007/06/i-feel-like-idiot-thanks-to-oracle.html
+---
+
+Yeah, Oracle's Stored Procedures parameter lists made me feel like an idiot.<br /><br />Consider, I have a person table, and one of the fields is an email address, named "Email."  Well, not thinking perfectly well, I labeled the parameter that is being passed in "email" as well.<br /><br />Oracle was perfectly happy with that.<br /><br />Anyways, this Stored Procedure is designed to handle Insert/Updates for this Person table. Well with my parameter list the INSERT happens just dandy. Without a problem.  But my UPDATE refused to put the new value into the column.<br /><br />Ultimately, I realized that the stored procedure was ignoring my parameter on the update in order to have the table update the column with the value that is currently in there.  Why, oh why wouldn't Oracle say "Hey, stupid, I don't know which value you want me to use, you've given me to variables named the same thing!"  But no, unless I was paying close attention (and by the time I did my own testing, I missed it, and it only showed up in peer testing) I would have missed the fact that that single field of the Course wasn't updating.<br /><br />Ah, just another reason why I love SQL Server over Oracle.

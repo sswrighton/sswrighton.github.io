@@ -1,0 +1,18 @@
+---
+layout: post
+title: Prototype and the Web Service
+date: '2008-05-16T01:13:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- JavaScript
+- ".NET"
+- AJAX
+- ASP.Net
+- Web
+modified_time: '2008-05-16T15:39:25.403-05:00'
+thumbnail: http://bp3.blogger.com/_0dC8-RtLatg/SC3u67GhTYI/AAAAAAAAAUQ/30QBgcUucFw/s72-c/json-soap-01.jpg
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-6262113835697653383
+blogger_orig_url: https://programmer.wrighton.org/2008/05/prototype-and-web-service.html
+---
+
+I'm a .NET programmer. Fundamentally, that's just what I do. Yet, I have a secret. It's a dark one for a .NET programmer, but I have it nonetheless.<br /><br />I hate ASP.NET AJAX.<br /><br />It would probably be more accurate to say that I despise it.<br /><br />With a passion.<br /><br />It's bloated, and It's never behaved as I expected it to. Maybe it's because I learned AJAX by rolling out my own implementation and then finding <a href="http://www.prototypejs.org/">Prototype</a>, FLEX and <a href="http://mootools.net/">MooTools</a> before finally settling down and really learning Prototype well enough that I can use it without constant references to it's API documentation.<br /><br />I was doing that while Microsoft was trudging along with Atlas.<br /><br />What's worse is the fact that ASP.NET AJAX just doesn't downgrade well. I'm a big proponent of the HIJAX style of AJAX implementation, meaning that it's built without all those fancy doo-dads, and then they get layered in, and the CLICK events for buttons and links get hijacked and used for AJAX-style goodness.<br /><br />Yet, while working this way, I have struggled often against an issue with using Prototype library within .NET. Mainly the fact that Web Services did not want to play nice.<br /><br />That, and only that, was the reason that I consistently went back and suffered with Microsoft's bloated variety of AJAX.<br /><br />But, I've solved <span style="font-weight: bold; font-style: italic;">THAT </span>problem.<br /><br />Web Services' webmethods are nothing more than functions which return SOAP messages. Which means that they are accessed via a standard HTTP POST. Now, that's not a problem at all. Prototype's AJAX functionality has that down pact. The problem is all that SOAP XML which the web service wraps around the JSON that I'm actually returning.<br /><br />Well, I finally actually, read that full page that is displayed when you're testing a web service through the browser. Oddly, the information I needed most to solve this problem was way down at the bottom. Which means I had to scroll to see it.<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://bp3.blogger.com/_0dC8-RtLatg/SC3u67GhTYI/AAAAAAAAAUQ/30QBgcUucFw/s1600-h/json-soap-01.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://bp3.blogger.com/_0dC8-RtLatg/SC3u67GhTYI/AAAAAAAAAUQ/30QBgcUucFw/s320/json-soap-01.jpg" alt="" id="BLOGGER_PHOTO_ID_5201075840747654530" border="0" /></a>Yes, that little blurb tells you not only exactly what to send, where to send it, but ALSO the exact format of the SOAP messages that is being returned wrapped around my JSON string.<br /><br />One could almost hear my cold, dead contractor's heart patter in my chest.<br /><br />While it is not the most ELEGANT solution, as that would involve actually parsing the XML to retrieve my JSON, I merely did a quick replace on the XML tags, substituting an empty string in their place. A quick <span style="font-weight: bold;">evalJSON </span>call later, and lo an behold I have my JSON object running happily.

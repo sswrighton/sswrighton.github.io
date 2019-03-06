@@ -1,0 +1,15 @@
+---
+layout: post
+title: Learn something new everyday...
+date: '2007-07-19T16:25:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- JavaScript
+- Usability
+- Web
+modified_time: '2007-07-19T16:30:24.054-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-3742797540194326739
+blogger_orig_url: https://programmer.wrighton.org/2007/07/learn-something-new-everyday.html
+---
+
+Apparently IE has a modal option for JavaScript to launch new windows.<br /><br />I can't see it being truly useful though, as it's not supported in Firefox or Opera.<br /><br />Anyway, the functionality in JavaScript looks like this:<br /><blockquote>Function modalWin() {<br />if (window.showModalDialog)  {<br /><br /><span style="font-weight: bold;">window.showModalDialog("xpopupex.htm","name", "dialogWidth:255px; dialogHeight:250px");</span><br /><br />}  else  {<br /><br /><span style="font-weight: bold;">window.open('xpopupex.htm','name', 'height=255,width=250, toolbar=no,directories=no,status=no, menubar=no,scrollbars=no, resizable=no ,modal=yes');</span><br /><br />}}<br /></blockquote><br />As I said, I'm not 100% certain what the usefulness of this is, as if I want something modal, then that means I need it modal in Firefox and Opera as well as in IE.

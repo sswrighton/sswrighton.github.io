@@ -1,0 +1,18 @@
+---
+layout: post
+title: eComics, MRU's and My Recent Documents
+date: '2008-09-30T22:45:00.003-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- programming
+- VB.Net
+- Coding
+- Windows
+- eComic
+modified_time: '2008-09-30T23:04:28.868-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7885053191611194097
+blogger_orig_url: https://programmer.wrighton.org/2008/09/ecomics-mrus-and-my-recent-documents.html
+---
+
+Well, my testbed for WindowsForms development has received another release. Version 0.0.1.003 of eComic is now up, and waiting for downloading over at Codeplex (http://www.codeplex.com/ecomic/).<br /><br />Quite a number of changes for this release, most of them are fixing behaviors, getting things closer to creating/using a reading list, but there were two that I really wanted to point out. These two are new classes that I added into my source code; one is a MRU Files listing, and the other adds accessed files to the "My Recent Documents" list on the user's START menu.<br /><br />The latter of the two is merely a simple WIN32 Interop wrapper for the SHELL DLL. Nothing obscenely fancy, but it works.<br /><br />The former (see the source code <a href="http://docs.google.com/Doc?id=dgrd4n99_319f2wfcfgn">here</a>) is a bit more involved. It's a class, which takes in 3 things: a ToolStripMenuItem object, the application's name and the number of files that can be on the MRU list. It then generates additional ToolStripMenuItems to go into the intial ToolStripMenuItem's DropDownItems attributes. <br /><br />The class itself raises an event when one of those child Menu Items are chosen, passing the selected file path &amp; name to the parent class.  I just shoved this information into the registry because that was easy for me, but it wouldn't be that hard to retrofit it to store the data into a database or even a flat file.

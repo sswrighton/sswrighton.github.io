@@ -1,0 +1,22 @@
+---
+layout: post
+title: I'm on a redesign kick.
+date: '2007-06-08T09:56:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- Oracle
+- programming
+- VB.Net
+- AJAX
+- Software
+- ASP.Net
+- Architecture
+- SQL Server
+- Web
+modified_time: '2007-06-08T10:15:00.813-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-1067454008254864291
+blogger_orig_url: https://programmer.wrighton.org/2007/06/im-on-redesign-kick.html
+---
+
+One of the projects that I "inherited" back when my co-worker was on paternity leave is codenamed EPB.<br /><br />This is the application which I built all the interfaces for, to allow for ease of use in switching controls back and forth.<br /><br />Not that big of a deal.<br /><br />At least until I started thinking about things. Specifically the fact that the prime client for this application may want to go to an ORACLE solution using Oracle Application Pages (or whatever their psuedo-webserver thing is called).<br /><br />Now, EPB represents hundreds, if not thousands, of man hours of development, all of it in .NET. The design of the database, and how the application works is mine. I laid the framework for it all, and I love it. The newest thing of using interfaces for the controls allows an even easier time in regards of new content and maintenance for the system.<br /><br />So, you can imagine my frustration at all of that code being effectively useless in the Oracle stuff. After all, there's not a 1-to-1 relationship between how Oracle produces HTML and how .NET does it, so all those server controls we've built will need to have something else done to them.<br /><br />Well, the other night, I went to sleep considering these implications - in part thanks to a visit from one of the principals from the client organization - and the next day thought up a solution.<br /><br />Javascript, DHTML, AJAX, JSON and web services.<br /><br />The system currently posts back to the webserver and then builds the page in .NET and streams out HTML to the client.  What the server controls are, are little bits and pieces of logic designed to facilitate that whole process, and group it into logical data/processing parts for our system.<br /><br />Yet, there is nothing stating that the system MUST behave this way. Heck, there's nothing stating that we have to have those little bits and pieces of logic in our compiled .NET DLL.<br /><br />My solution is to kill all the ASPX pages, and have all of the data processing in a web service. With AJAX, we can get the data that we currently use to determine which page is being displayed, and then with JavaScript/DHTML (specifically, using the <a href="http://www.prototypejs.org">Prototype JS library</a>) we can build that page dynamically as needed. Javascript will be responsible for control creation and destruction and sending the user-entered data to the web service. <br /><br /><a href="http://json.org/">JSON </a>would ease, the amount of data being sent, in addition to just plain being easier to use as a data transfer medium.<br /><br />Additionally, because the data saving logic is all on the web server, as long as it continues to accept the same properties, and return the same data, then we can transfer that logic into any code that we wish (with only possible manipulations of the asynchronous data transfer code).  The HTML page and its attending JavaScript which would be the meat of how the UI works would stay the same, regardless of any changes tot he business logic.<br /><br />And as a third benefit to this, we can use this web service in other scenarios as well. Consider, the application is built as a web interface. Well, with the data flow being in a web service, building a windows forms UI which consumes that service in a manner similar to the web UI would be an easy task.<br /><br />Now, all I have to do is tell the principals here at my company that I want to redesign how EPB works once again.

@@ -1,0 +1,19 @@
+---
+layout: post
+title: eComic WPF
+date: '2008-11-23T22:51:00.004-06:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- programming
+- VB.Net
+- Coding
+- WPF
+- eComic
+modified_time: '2008-11-23T23:25:44.177-06:00'
+thumbnail: http://4.bp.blogspot.com/_0dC8-RtLatg/SSo0iEZX_KI/AAAAAAAAAb8/AjM0uj0pNVE/s72-c/ecomic-screen.png
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-2298021220791570015
+blogger_orig_url: https://programmer.wrighton.org/2008/11/ecomic-wpf.html
+---
+
+<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_0dC8-RtLatg/SSo0iEZX_KI/AAAAAAAAAb8/AjM0uj0pNVE/s1600-h/ecomic-screen.png"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 182px; height: 200px;" src="http://4.bp.blogspot.com/_0dC8-RtLatg/SSo0iEZX_KI/AAAAAAAAAb8/AjM0uj0pNVE/s200/ecomic-screen.png" alt="" id="BLOGGER_PHOTO_ID_5272084073690954914" border="0" /></a>Well I've been playing with WPF lately, and while I don't have it down 100%, I do have a <a href="http://www.codeplex.com/ecomic/Release/ProjectReleases.aspx?ReleaseId=19790">working prototype</a> (see the pretty image there).  It's a great little thing, with what amounts to two panels (one for thumbnails, properties, etc and the other for the actual image) and my personal favorite of UI chioces: the Ribbon control.<br /><br />I'm not sure why I like the ribbon so much, but I do like the paradigm behind it.<br /><br />Anyways, the technologies hiding in this thing are as follows:<br /><ul><li>Ribbon Menu Control<br /></li><li>WPF<br /></li><li>WPF Layouts</li><li>Scroll Viewers</li><li>Zip Library</li><li>WPF Image Control</li><li>WPF Tab Control<br /></li></ul>And that's just the major things that I can remember off the top of my head.<br /><br />And I'm not above admitting that it's taken me a bit to get it into this state of being able to work it. Sure, it only took a few hours to get the base system up and running, but it was ugly. The main window looked nice with its Ribbon component, but the Image Viewer popped up as a secondary window that lacked the Ribbon control. <br /><br />It was in essence the very paradigm I was trying to escape from by moving the application to WPF.<br /><br />Which meant that it was back to the research boards, and hunting for a way around the problem. Enter the Tab Control.  I was able to override the style associated with the header of the tab, and make each of them have a label and a little "X" button. <br /><br />Once that was in place, it was a simple matter of ripping out the <span style="font-style: italic;">ImageViewer </span>as a WPF form and create the <span style="font-style: italic;">ImageViewer </span>as a user control which can be added to a Tab Item. This is the paradigm that you get to see in the picture above.<br /><br />Anyways, I've finally got all those little things sorted, and began doing communication, information exchange and UI changes from the various tab-based <span style="font-style: italic;">ImageViewers </span>and the Thumbnail tab that hangs out on the left hand side of the application.<br /><br />Next up the Resume Reading, Next &amp; Previous Archives buttons.

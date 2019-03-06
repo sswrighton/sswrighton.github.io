@@ -1,0 +1,16 @@
+---
+layout: post
+title: Inheriting Interfaces
+date: '2007-05-09T09:44:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- programming
+- VB.Net
+- C#
+modified_time: '2007-05-09T09:56:36.067-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-1340813909738485007
+blogger_orig_url: https://programmer.wrighton.org/2007/05/inheriting-interfaces.html
+---
+
+As I'm sure I said earlier, I'm currently going backwards and implementing an Interface on all the custom controls of one of our projects, and implementing even standard controls with this interface, to make things a tad easier to maintain and to shorten the code base a bit.<br /><br />It was going happily along, until I stumbled across a set of classes one of which inherited from the other.<br /><br />In C# that's not a problem, I wouldn't have ever even known. But of course, the project is in VB.Net and it threw up compiler errors. Apparently, in VB.Net you can't implement an interface in a class if a base class already implements the interface.<br /><br />So, disturbed by this glaring problem in the VB.Net design, I went to our friend Google to find an answer. Much to my enjoyment (and almost amazement) Google actually provided an answer to my problem this time, and it was the top search return, so I could have even used the "feeling lucky" button.<br /><br />Anyways, the return result was this article, entitled <a style="font-style: italic;" href="http://imar.spaanjaars.com/QuickDocId.aspx?quickdoc=337">'Re'implementing Interface Implementations: VB.Net vs. C#.</a><br /><br />Glee! A solution has been proposed. And apparently it's the simplest solution possible. For VB.Net all one has to do is override the base class's method which implements the Interface's method and it's all good to go.

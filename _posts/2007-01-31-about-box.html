@@ -1,0 +1,15 @@
+---
+layout: post
+title: The About Box
+date: '2007-01-31T08:37:00.000-06:00'
+author: Stephen Wrighton
+tags:
+- User Interface
+- Link
+- Usability
+modified_time: '2007-01-31T08:43:39.194-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7958732062918802886
+blogger_orig_url: https://programmer.wrighton.org/2007/01/about-box.html
+---
+
+I <a href="http://www.codeproject.com/vb/net/aboutbox.asp">found a Code Project article describing an about box</a> which the author rolled out as a .NET winforms control. He offers both .NET 1.1 and 2.0 versions of this control. What I found interesting is that his goal was to create a simple set of 'dogtags' for an application, rather than anything fancy.<br /><br />Which is a fine and noble goal for .NET 1.1, but .NET 2.0 already has a simple About Us form control as a standard part of it's templates.<br /><br />Sure, his does extra things like display the version for each of the DLL's in the application, but frankly, those are better served in a configuration file somewhere, and only used during updates. Or even if there's an error, THEN display that type of information to the user (as a bug report to be sent to the developer). Ultimately, users don't need to know all the information which the author provides in his about box, and while I find it neat and interesting, I can't see where it would be useful from a user experience or user accessibility point of view for a standard user.<br /><br />A standard user, just doesn't care that much about it.

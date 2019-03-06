@@ -1,0 +1,15 @@
+---
+layout: post
+title: XPATH in .NET
+date: '2007-10-02T09:04:00.001-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- ASP.Net
+- XML
+modified_time: '2008-05-23T11:56:56.688-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-4956298312979402065
+blogger_orig_url: https://programmer.wrighton.org/2007/10/xpath-in-net.html
+---
+
+Sometimes I'm truly oblivious to things.<br /><br />I love working with XML in .NET it's a great way to send information across the internet to disparate companies, such as UPS. Well, when parsing XML messages that I receive I use XPATH. No big deal. The problem lies in the fact that I don't do it often, so I tend to forget that first "/".<br /><br />Not a big deal. Just an hour of hunting down why I wasn't reporting the response I received from UPS.<br /><br />That, and the fact that I was doing error checking on Node.Value and Node.InnerText when only Node.InnerText was populated.

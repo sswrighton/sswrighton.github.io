@@ -1,0 +1,18 @@
+---
+layout: post
+title: A New Project and a RadioButtonList
+date: '2007-07-12T11:03:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- programming
+- VB.Net
+- Software
+- Coding
+- Web
+modified_time: '2007-07-12T11:11:42.474-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-6453514204899961932
+blogger_orig_url: https://programmer.wrighton.org/2007/07/new-project-and-radiobuttonlist.html
+---
+
+Got two new things at work this week. The first is a new employee and the second is a new project. That ramps up the total current projects that I'm assigned to to 4. One is "turned off,"  while the other three are happily chugging alone. And of course, none of these projects are simple business websites. No, these are full fledged web applications, all running on an interconnected database.<br /><br />Whee.<br /><br />And, I get the joy of training the new guy. Truthfully, I enjoy training. I enjoy imparting my knowledge to others. It's fun. Especially in the workplace where people actually WANT to learn. The downside is that there's a lot of knowledge that needs to be imparted. Everything from process to arcane code structures which we use to improve application efficiency (i.e. using "OBJECT Is Nothing" rather than "IsNothing(object)", etc).<br /><br />This of course cuts into the time I have to spend on developing. Since we were tossed another application, that means I had to toss some development towards the new guy before I was certain how much he understood what the code is doing. Well, I was trained via trial by fire, so I guess it will work for him as well.<br /><br />Anyhow, I spent a good hour cursing at .NET 1.1 this morning. I have a RadioButtonList on my form, and the datastore that was coming from the database was the Text, Value and Selected attributes of the ListItems. So, I spent a bit of time, hunting the web to see if there was a way to utilize the selected attribute while doing a classical databind.<br /><br />Unfortunately, there's not. That meant that I had to walk the DataReader myself, creating the ListItems and setting their Selected attribute all the while. How annoying.<br /><br />I wonder if they fixed that in .NET 2.0, but somehow I doubt it.

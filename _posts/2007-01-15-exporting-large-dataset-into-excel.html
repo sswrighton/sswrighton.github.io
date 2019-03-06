@@ -1,0 +1,14 @@
+---
+layout: post
+title: Exporting Large Dataset into Excel
+date: '2007-01-15T22:00:00.000-06:00'
+author: Stephen Wrighton
+tags:
+- Link
+- VB.Net
+modified_time: '2007-01-15T22:32:07.768-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-5672676370222433466
+blogger_orig_url: https://programmer.wrighton.org/2007/01/exporting-large-dataset-into-excel.html
+---
+
+I like CodeProject. I like it a lot, and it is one of the sites I hit while searching for answers to questions.<br /><br />Of course, on occasion, they get articles like this <a href="http://www.codeproject.com/useritems/VB_Net.asp">one</a>.  Basically, it's the author's idea on the ONLY way to take a large data table and place it into an Excel file in a fast manner.<br /><br />His algorithm is basically a method, which accepts a data table and a filename. He then walks the data table and builds a tab-delimited string using the StringBuilder class. The next thing he does is pass that StringBuilder to another method to write the data out to a file.<br /><br />My first question is what version of Excel is he writing to? To me, it seems that he would be easier to put the data table into a dataset and export that as XML which Excel can natively accept in the newer versions of Excel.<br /><br />If he's writing to an older version, why not create a Excel file, and then use ADO.Net to open that file for Data Access, and merge the Excel file with the Data Table?<br /><br />And then there's the overhead of running this in two separate methods, with what amounts to nested Try/Catch blocks.  The author of the article is using the Try/Catch blocks to do error handling rather than checking for the possible issues which would generate an error.<br /><br />So while there is nothing wrong with this implementation, it cannot be the 'fastest' way of doing things. Not with the overhead of the two methods and two Try/Catch blocks. Likewise, I would drop the use of constructs such as IsDBNull, and IIF. Rather do a null check with a construct such as "stringParameter is DBNull.Value."

@@ -1,0 +1,15 @@
+---
+layout: post
+title: Parsing Enumerations
+date: '2007-03-08T10:25:00.000-06:00'
+author: Stephen Wrighton
+tags:
+- programming
+- VB.Net
+- Coding
+modified_time: '2007-03-08T10:35:43.325-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-4542460693345712849
+blogger_orig_url: https://programmer.wrighton.org/2007/03/parsing-enumerations.html
+---
+
+In my project at work, I deal with a large number of enumerations. Things such as the type of a key or the status of various objects. Now, I could have maintained a table in the database which corresponds to those enumerations, but that seems like double work to me, so when designing the database, I made the decision to just use VARCHAR fields where I would normally have the lookup identifier for the database table.<br /><br />That means, I can just save my enum straight into the table rather than having to deal with looking up its corresponding value.<br /><br />I also chose VARCHAR for a string representation in the database over an INT for just the numeric value behind the enum so that when looking at the actual data in the various tables, I could easily discern what those enums actually are.<br /><br />Getting the string representation of an enum is something I've known how to do for quite a while, and do do it whenever I'm working with them and I need to see the chosen enum in the debug output. It's just a simple matter of using the <span style="font-weight: bold;">ToString </span>method of the enumeration.<br /><br />Yet, I've never gone the other way, of taking a string back to the enum value. It's not a simple matter of using <span style="font-weight: bold;">CType </span>as enumerations are in actuality numbers and not the strings that I'm saving.<br /><br />So, I went to my good friend Google.<br /><br />And discovered this glob entry: <a href="http://weblogs.asp.net/avnerk/archive/2005/07/22/VB.NET-and-Enums.aspx">Miscellaneous Debris: VB.Net and Enums</a><br /><br />His issue was using the enumerations that are inherent parts of the VB.Net language, but the concept he described works regardless.<br /><br />The solution is to basically, force the compiler to read the string, and compare the possible enum values to see which is the correct one using the parse command like thus:<br /><blockquote>[Enum].Parse(System.Type, Value)<br /></blockquote><br />So, for my purposes what I would use is:<br /><blockquote>[Enum].Parse(GetType(Status), dataReader("Status"))<br /></blockquote>And it works beautifully!

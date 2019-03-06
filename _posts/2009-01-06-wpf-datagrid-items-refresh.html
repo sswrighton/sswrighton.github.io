@@ -1,0 +1,19 @@
+---
+layout: post
+title: WPF Datagrid Items Refresh
+date: '2009-01-06T20:56:00.000-06:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- programming
+- VB.Net
+- Coding
+- Windows
+- C#
+- WPF
+modified_time: '2009-01-06T20:56:01.678-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-6254974514958120373
+blogger_orig_url: https://programmer.wrighton.org/2009/01/wpf-datagrid-items-refresh.html
+---
+
+So, I have this WPF datagrid, and it's quite happy in the way it works. With a single exception.  Some background, I'm not doing the base behavior for editing/adding, but rather have a separate control outside the grid which is responsible for that behavior (as it is also the control responsible for adding the initial element).<br /><br />But I was having a problem, and it was with the Grid's UI.<br /><br />My changes and additions were not making their way into the UI display.  No matter how many times I invalidated the User Interface it just would not get displayed.  And this was not just for Updates, but also for Inserts and Deletes.<br /><br />VERY much annoying.<br /><br />But, I wouldn't be here if I didn't have a solution.<br /><br />As stated, my initial try was to use the Datagrid.InvalidateUI command, as that's basically what I was trying to do: repaint the grid. What I wasn't doing with that was telling the Datagrid to look at the underlying datasource and refresh the UI from that.<br /><br />The magic command?  <span style="font-weight: bold;">Datagrid.Items.Refresh()</span><br /><br />Yeah, I did feel a bit silly after finding that out.  Of course I blame it on the fact that I've spent too much time in the ASP.NET arena where I can force a data-rebinding by calling the DataBind method of the object. Oh well, I solved the problem, so I'm all sorts of happy.

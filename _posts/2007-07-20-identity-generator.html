@@ -1,0 +1,16 @@
+---
+layout: post
+title: Identity Generator
+date: '2007-07-20T20:45:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- programming
+- Coding
+- Usability
+- Testing
+modified_time: '2007-07-20T20:51:25.459-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-2799087546631026189
+blogger_orig_url: https://programmer.wrighton.org/2007/07/identity-generator.html
+---
+
+Something fun wandered across my RSS Feed this evening. It's a <a href="http://www.fakenamegenerator.com/index.php?gen=random&n=us&amp;c=us">random fake identity generator</a>.<br /><br />They can generate a whole bunch of information needed to make this fake identity look real, and they can generate medium-sized datasets for you (up to 40,000 records) for free.<br /><br />In the past, I've worked on a medical PDA application, and all our testing data had to be cleaned before we could do any testing on our application.<br /><br />The part of the application I worked on was where this would have been the most useful. I built a Windows service which polled the message queue where the Enterprise data source would dump its data. It then took that data, parsed it out and shoved it into our own data structures for the application. A lot of fun XML and Message Queueing and just Windows services in general, but it wasn't a lot of fun anonymizing 10,000 records of personal information. Oh, if only I had had this 3 years ago.

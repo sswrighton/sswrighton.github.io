@@ -1,0 +1,16 @@
+---
+layout: post
+title: An Interface here, an Interface there....
+date: '2007-05-08T14:57:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- Microsoft
+- User Interface
+- ".NET"
+- ASP.Net
+modified_time: '2007-05-08T15:07:22.909-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-6979209569939176919
+blogger_orig_url: https://programmer.wrighton.org/2007/05/interface-here-interface-there.html
+---
+
+I'm currently working on retrofitting an application which dynamically creates controls with an interface which allows those controls to be created even more dynamically.<br /><br />Currently,  we have a whole host of functions which deal with insatiating the controls and then getting the attributes for the controls and then even more dealing with saving and loading the data from those controls.<br /><br />My solution to this maintenance nightmare is the interface.  Using the ACTIVATOR object, and a couple of support classes, I've streamlined the process of creating these dynamic controls into  something that takes a single function call for instantiating ALL the control types. And single high-level methods to do attribute assignments, loading and saving of data.<br /><br />The magic is done via the fact that a lot of our controls are custom built server controls. So, we're already down in the low-level bits and pieces of the Framework and it's a simple matter of creating and implementing the interface.<br /><br />What this does for maintenance, is make the controls even more of a blackbox than they were previously. Assigning the various attributes, is a matter of passing that data in a DataSet to a ReadOnly Property. Loading the data is giving a single specialized class to the control. And saving the data, is a matter of reading from a specialized collection from the control. Then the control itself is responsible for what happens with the passed in data.

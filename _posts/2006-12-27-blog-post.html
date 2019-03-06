@@ -1,0 +1,17 @@
+---
+layout: post
+title: Are strings better in the database or VB.Net code?
+date: '2006-12-27T09:28:00.000-06:00'
+author: Stephen Wrighton
+tags:
+- VB.Net
+- Software
+- strings
+- SQL Server
+modified_time: '2006-12-28T08:30:08.101-06:00'
+thumbnail: http://bp3.blogger.com/_0dC8-RtLatg/RZKU-2M0inI/AAAAAAAAAAM/yUyksBeso58/s72-c/Drawing1-or.jpg
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-2342942090123128311
+blogger_orig_url: https://programmer.wrighton.org/2006/12/blog-post.html
+---
+
+I'm an unabashed code man. And while I firmly believe that some operations should always be carried out inside the database, I also firmly believe that  there are some operations which it makes no sense at all to run within the database.<br /><br />And I find myself occasionally bumping heads against one of our engineers that believes any type of data manipulation belongs within the database.<br /><br />My thought is we need to create a simple platform to test it.<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://bp3.blogger.com/_0dC8-RtLatg/RZKU-2M0inI/AAAAAAAAAAM/yUyksBeso58/s1600-h/Drawing1-or.jpg"><img style="margin: 0pt 0pt 10px 10px; float: right; cursor: pointer;" src="http://bp3.blogger.com/_0dC8-RtLatg/RZKU-2M0inI/AAAAAAAAAAM/yUyksBeso58/s320/Drawing1-or.jpg" alt="" id="BLOGGER_PHOTO_ID_5013233142638873202" border="0" /></a>Basically, here's the situation. We have a web application which prompts the user for data and then builds a large RTF file from the user entered data in addition to boiler plate text. An RTF file is nothing but a large specially formated string - and since the creation of that string is data manipulation, he believes that it should be done within Stored Procedures and Functions within the database.<br /><br />My argument is that it needs to be tested and metrics generated for both creating that large string in the database and creating the large string within a VB.Net class using StringBuilder.<br /><br />Unfortunately, I am unable to find any metrics or tests saying that building strings is more efficient in one form or the other, which surprises me slightly. One would think that such ammo would be used loudly and often by either the all-database or the all-code sides, especially in the war over using Stored Procedures to access all data in SQL Server.<br /><br />And while I know that SQL Server 2005 has the new LOB's, we're still using SQL Server 2000 for this project, so we're dealing with VARCHAR(8000) and TEXT fields. And manipulating TEXT fields is down right evil within SQL Server.<br /><br />Of course my hesitation to embrace this could be based entirely on the desire to never work with large string objects in SQL Server and everything else is just mad justifications to support my on biases, but I think I will be running the tests when I get some free time just for myself.

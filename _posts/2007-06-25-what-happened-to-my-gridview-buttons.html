@@ -1,0 +1,17 @@
+---
+layout: post
+title: What happened to my gridview buttons?
+date: '2007-06-25T08:29:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- programming
+- VB.Net
+- ASP.Net
+- Web
+modified_time: '2007-06-26T20:38:34.917-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-4528593527130425283
+blogger_orig_url: https://programmer.wrighton.org/2007/06/what-happened-to-my-gridview-buttons.html
+---
+
+Argh, I have a website I'm working on. The website is broken into functional components (such as a page to deal with courses and a page to deal with events and so on), and these pages deal with every aspect of those components (adding, editing, listing, etc).<br /><br />Well since I needed to be able to jump from one component to the other, I used query string variables to control which page I was on.<br /><br />Not a big deal, it's an old technique which works. I could have just as easily used POST commands, but frankly, this works better as those query string variables can be bookmarked by the user.<br /><br />Well, for whatever reason, the click events for some LINKBUTTONS in my GRIDVIEW aren't working. I don't know why, there's no reason why they shouldn't. They just don't work. It annoys me to no end.<br /><br />I have the buttons defined properly. I have the GRIDVIEW defined properly. I've even got the GRIDVIEW <span style="font-weight: bold;">RowCommand </span>event handler defined properly, but for whatever reason, the thing just doesn't want to work.<br /><br />Time to go smack my head against the wall for a bit, I guess.<br /><br /><span style="font-weight: bold;">EDIT: </span>I meant to update this the other day, but I finally figured out what it was. The PANEL which held the GridView had the EnabledViewState attribute set to False.

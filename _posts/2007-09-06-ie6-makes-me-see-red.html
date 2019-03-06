@@ -1,0 +1,18 @@
+---
+layout: post
+title: IE6 Makes me see red....
+date: '2007-09-06T15:18:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- Microsoft
+- User Interface
+- CSS
+- HTML
+- Coding
+- Web
+modified_time: '2007-09-06T15:32:25.691-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-5395009090907398873
+blogger_orig_url: https://programmer.wrighton.org/2007/09/ie6-makes-me-see-red.html
+---
+
+It's official.<br /><br />I hate IE6. Back when it was the version that everyone was running, I did very, very little with CSS and I had just a general feeling of malaise related to it. I didn't hate it, I just prefered Firefox.<br /><br />Yet now after the release of IE7 and it's great (though still not perfect) standards compliance with CSS, coupled with the fact that I'm working more and more with CSS, I realized just how much I hate IE6.<br /><br />Why you ask?<br /><br />Because I just spent nearly two whole days fixing my layout so that it would work in IE6. Why someone is still running IE6 I have no clue. They should have been upgraded to IE7 by now. Yet, for whatever reason, my layout fell apart in IE6.<br /><br />First it just wasn't showing up, and then once I got it showing up, the text would be split duplicated across multiple lines. I have to give nods to a couple of other websites out there which helped me solve these problems:<br /><ol><li><a href="http://virtuelvis.com/archives/2004/02/css-ie-only">Hack Free CSS for IE</a></li><li><a href="http://www.positioniseverything.net/explorer/dup-characters.html">IE Duplicate Characters Bugs</a><br /></li></ol>So, I have these thoughts on what could be causing my problems, and am doing things like destroying the functionality for the collapsing navigation system, and removing all comments and hidden fields from the page.  Ultimately, my solution is two fold, and both things are aimed at IE6 where all other browsers will ignore them.<br /><br />First to kill the duplicate characters bug that was appearing on nearly every link I had, was this bit of code:<br /><blockquote><!--[if IE 6]><br /> <style><br />    #linksmenu {width:188px; margin-right:-5px;}<br />  .linksmenuA{ margin-right:-5px;}<br />  .linksmenuA:hover{ margin-right:-5px;}  <br /></style> <br /><!--[endif]--><br /></blockquote>Then I also added this to my longer links, to force a wrap and keep the display from hiding characters:<br /><blockquote><!--[if IE 6]><br /><![endif]--><br /></blockquote>Goodness, I despise, IE hacks.

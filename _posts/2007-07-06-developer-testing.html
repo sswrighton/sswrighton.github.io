@@ -1,0 +1,15 @@
+---
+layout: post
+title: Developer Testing
+date: '2007-07-06T08:11:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- programming
+- Coding
+modified_time: '2007-07-06T08:21:38.272-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-1068555798722302635
+blogger_orig_url: https://programmer.wrighton.org/2007/07/developer-testing.html
+---
+
+This must probably be the most onerous portion of my job. The task where I have to play with the currently stable pre-release version of our product prior to turning it over to the testers for system testing. Fixing little things like someone having changed every ":" in the application's text to a ".".<br /><br />I know it needs to be done. I know WHY it needs to be done, and I can do it. I just rather be rebuilding the processing engine (again), because, well, that is FUN!..<br /><br /><br />Speaking of rebuilding the engine, the product I'm talking about is our document builder (and if we ever get our commercialization stuff finished, I'd be ecstatic to provide links to this thing, as I'm proud of it). Anyways, our document builder has certain controls which are always on the page. These controls are basically for the information that is shared across pursuit-scopes for the documents (such as the name of a project). That's not a problem, the problem is that there are multiple pursuit scopes, and each scope has a slightly divergent need for controls. So the design involved adding pursuit-pages to handle that, in addition to the INDEX page. A change from previously where we had only a single page. An unfortunate side-effect of that was suddenly our code base tripled in size, with a lot of that being replicated functionality for those pages.<br /><br />I didn't like that then (too much chance for functions not getting update) and I don't like it now. So my solution is to change how the system works. Currently, the application asks for a pursuit and an department. Once it has that information, then it allows you to create the document in the database. Which seems backwards to me, especially since the application is a document builder. If we made those shared controls dynamic, then we could pretty much force the application to create a path for data entry based on document type. Which not only means we can go to a single page again, but that we can also use the tool to generate documents that are not specifically tied to a project (what those mythical documents are, I'm not sure, but it sounds good as an argument).<br /><br />Anyways, now  I must convince the project leaders of the glory of my vision. And then tell them I want to change the system even more, so that the controls are all built dynamically via JavaScript, loading and saving data through a web service accessed via AJAX.<br /><br />That should be a fun discussion.

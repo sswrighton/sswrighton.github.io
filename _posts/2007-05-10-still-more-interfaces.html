@@ -1,0 +1,16 @@
+---
+layout: post
+title: Still More Interfaces...
+date: '2007-05-10T15:19:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- Interface
+- ".NET"
+- programming
+- C#
+modified_time: '2007-05-10T15:27:00.038-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7919903183074488069
+blogger_orig_url: https://programmer.wrighton.org/2007/05/still-more-interfaces.html
+---
+
+I know, I'm on an interfaces kick. Well, that's what I've been working on/with all week, so it's perfectly understandable.<br /><br />Anyways, I'm building that interface system so that I can treat all my custom server controls for the project in the exact same way. Well, I came across the realization that I needed to be able to raise events.  Basically, there's a specific framework in the application for displaying messages to the user in the same way for every message. Well, to get information from the depths of some of these controls, they were raising events.<br /><br />And since I'm treating every control in the exact same manner, I can't make allowances that some controls will implement the event and not others. Therefore, the interface must declare the event.<br /><br />Which ended up being surprisingly simple.<br /><br />First I built the EventArgs class whose information is being passed back and forth for. Then after that I defined the delegate:<br /><blockquote></blockquote><blockquote><span style="color: rgb(51, 51, 255);">public delegate void</span> DisplayMessageEventHandler(<span style="color: rgb(51, 51, 255);">object </span>sender, DisplayMessageEventArgs e);</blockquote>Then after I had my delegate defined, I added in the event code into the interface :<br /><span style="color: rgb(51, 51, 255);"></span><blockquote><span style="color: rgb(51, 51, 255);">event </span>DisplayMessageEventHandler DisplayMessage;</blockquote>Like I said, it was surprisingly simple.

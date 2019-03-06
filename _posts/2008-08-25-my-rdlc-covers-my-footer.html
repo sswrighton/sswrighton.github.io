@@ -1,0 +1,17 @@
+---
+layout: post
+title: My RDLC covers my footer
+date: '2008-08-25T22:56:00.003-05:00'
+author: Stephen Wrighton
+tags:
+- CSS
+- ".NET"
+- RDLC
+- Web
+modified_time: '2008-08-25T22:56:00.202-05:00'
+thumbnail: http://4.bp.blogspot.com/_0dC8-RtLatg/SLMTSWRhweI/AAAAAAAAAX4/NiDZ8Gf_WfQ/s72-c/footer-broken.png
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-1446197905123512421
+blogger_orig_url: https://programmer.wrighton.org/2008/08/my-rdlc-covers-my-footer.html
+---
+
+<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_0dC8-RtLatg/SLMTSWRhweI/AAAAAAAAAX4/NiDZ8Gf_WfQ/s1600-h/footer-broken.png"><img style="margin: 0pt 0pt 10px 10px; float: right; cursor: pointer;" src="http://4.bp.blogspot.com/_0dC8-RtLatg/SLMTSWRhweI/AAAAAAAAAX4/NiDZ8Gf_WfQ/s200/footer-broken.png" alt="" id="BLOGGER_PHOTO_ID_5238551997499687394" border="0" /></a>Running IE7 I found a fun little issue regarding the RDLC ReportViewer in .NET and my footer as defined in my CSS Layout coming from my Master Page.  Basically, the footer was appearing underneath the scroll bar from the iFrames (see the image to the right there).<br /><br />What confused me at first was the fact that it was happening in IE7 and not IE6. An odd state of affairs at the baset of times.<br /><br />My guess as to why, is that in IE6, scrollbars are generated INSIDE the element, and they changed that in IE7, but all of us CSS coders are still telling IE to perform according to the IE6 ruleset.<br /><br />So, to accomplish this little bitty task, what I needed to do was put in another CSS class into the div that wrapped my ReportViewer (and the iFrame which it generates). Since my ReportViewer is running at 400 pixels, I just created the following CSS class and applied it to the DIV that wraps around the viewer:<br /><blockquote>.<span style="color: rgb(102, 0, 0);">viewer </span>{ <span style="color: rgb(204, 0, 0);">height</span>:<span style="color: rgb(0, 0, 153);">425px</span>;}</blockquote>A small and simple bit of CSS eh?<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_0dC8-RtLatg/SLMU8kUFFZI/AAAAAAAAAYA/6eZMvUAz2mw/s1600-h/footer-fixed.png"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer;" src="http://1.bp.blogspot.com/_0dC8-RtLatg/SLMU8kUFFZI/AAAAAAAAAYA/6eZMvUAz2mw/s200/footer-fixed.png" alt="" id="BLOGGER_PHOTO_ID_5238553822334621074" border="0" /></a>What that snippet of CSS does is push my footer down just that little bit necessary in order to make sure that it is always displayed (see picture to the left).  Also, since it's just a class, then I can apply it only on those pages where necessary rather than on the MasterPage or worse having to create a new MasterPage. <br /><br />Better yet, due to CSS's ability to stack, I can just append it to an existing DIV rather than having to create a brand new div.

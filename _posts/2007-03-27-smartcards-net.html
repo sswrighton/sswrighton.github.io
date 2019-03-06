@@ -1,0 +1,16 @@
+---
+layout: post
+title: SmartCards & .NET
+date: '2007-03-27T21:20:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- Microsoft
+- ".NET"
+- PC/SC
+- programming
+modified_time: '2007-03-28T09:27:15.864-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7567881435437401204
+blogger_orig_url: https://programmer.wrighton.org/2007/03/smartcards-net.html
+---
+
+This is insane.<br /><br />My project at work has the requirement of talking to a SmartCard reader, and our hardware partner on this project had developed libraries to do just that - one for Linux and one for Windows. Good deal, huh?<br /><br />Well, after learning enough C++.Net to get these C Libraries to actually talk to .Net in an efficient fashion, I went to use the first function and managed to get a <span style="font-weight: bold;">NULL Reference Exception</span>. Yippie.<br /><br />And of course the libraries weren't compiled in <span style="color: rgb(153, 0, 0);">DEBUG </span>mode, so all I know is that there's this exception coming out of the library.  Fast Forward two days and we're attempting to recompile the libraries in DEBUG mode in the vain hope that we can pinpoint where this error is coming from.<br /><br />And while one of our programmers more familiar with C and MAKEFILES has been working on that, I've been looking at other options for getting information to and from the SmartCards.<br /><br />Why, oh why, did Microsoft leave the ability to interact with PC/SC compliant devices out of the .NET Framework? It was a seriously gross oversight on their part, and one that I sincerely hope they correct in the near future.<br /><br />Oh well, back to trying to get the SmartCards read.

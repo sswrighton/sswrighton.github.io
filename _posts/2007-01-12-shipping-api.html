@@ -1,0 +1,13 @@
+---
+layout: post
+title: Shipping API
+date: '2007-01-12T13:37:00.000-06:00'
+author: Stephen Wrighton
+tags:
+- Coding
+modified_time: '2007-01-12T13:45:23.262-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7206072380498059168
+blogger_orig_url: https://programmer.wrighton.org/2007/01/shipping-api.html
+---
+
+I've recently had the horror of using UPS's and FEDEX's XML-based shipping API's.  And while UPS's is infinitively better than FEDEX's, both still are rather lacking in functionality.<br /><br />The major screwed-up functionality that is lacking in both systems is for their RateQuote request to actually verify if the shipper can ship to a specified location. Instead, they wait until the Shipper requests a shipping label, and then throws up there. Bad design.<br /><br />Another move that I think UPS did dumb, is that the software I built is tied intimately to my username/password. If for whatever reason, I decide to change my password, i have to go back and make modifications to any client apps that use the software. They already require a valid UPS Account Identifier AND a developer key. There was no need to have the developer's UPS website username/password included in the XML messages.  VERY bad design.<br /><br />In the end, I've found the experience, a bit annoying, and hope it will be a decent while before I have to suffer at the hands of shipping API's again.

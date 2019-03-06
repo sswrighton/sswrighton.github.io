@@ -1,0 +1,15 @@
+---
+layout: post
+title: LINQ to SQL
+date: '2009-01-07T21:08:00.002-06:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- Coding
+- LINQ
+modified_time: '2009-01-07T21:08:00.491-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-9197380056229104228
+blogger_orig_url: https://programmer.wrighton.org/2009/01/linq-to-sql.html
+---
+
+Oh My Stars and Garters! I think I may be in love.  I was working on a personal project last night, and decided on two things:<br /><ol><li>I would  use OpenID as the login provider</li><li>I would use Linq to Sql as the Data Access Layer</li></ol>I'll talk about my experiences with OpenID later, for now, I need to gush a bit about the Linq stuff.<br /><br />First though, I need to admit something: I was hesitant about adopting Linq. I mean seriously, look at the stuff. You do some fancy hand waving and all of a sudden, you have a data layer?  It just seemed so... unnatural.<br /><br />And I was right, it fundamentally is some fancy hand waving, and then you have a datalayer. It is unnatural, but it is also awesome!<br /><br />So, what happens is that I build myself my data structures in SQL Server. I then use the diagram tool to make sure that all those fun Primary &amp; Foreign Key and associated relationships are there. At that time, I drag and drop those tables onto the Linq designer surface. My computer freezes for a moment as it does some crunching and then I have data access stuff.<br /><br />I'm being quite literal here; and it's fast. Fast to use, and fast to develop against.<br /><br />Consider, I have a Customer object as part of my DataContext. The steps I would take, to save my changes to this are thus:<br /><ol><li>Instantiate an instance of the Data Context </li><li>Check to see if the Customer exists in the Data Context</li><li>If yes, return that, if no return nothing</li><li>If nothing, instantiate an new instance of a Customer, and add to Customers collection</li><li>Make changes to the properties of Customer</li><li>Update the Data Context</li></ol>And sure, those are fundamentally, the exact same steps I would take with any data access layer. But the power is in the code. Consider, to do these steps, I would end up writing probably a hundred lines of code, and a good 50 or so lines of SQL.  I mean, I would need to instantiate connections and commands, and just do all that stuff manually.<br /><br />For Linq, it's this:<blockquote>Dim db as DataContext<br />Dim Cust As Customer<br />Cust = (Select d From db.Customers Where d.Id = MyIdVariable ).SingleOrDefault<br />If Cust Is Nothing Then<br />     Cust = New Customer<br />     db.Customers.InsertOnSubmit(Cust)<br />End If<br />Cust.CustomerName = txt.Text<br />db.SubmitChanges</blockquote>That is it.<br /><br />What's happening there is I'm instantiating the datacontext, grabbing either the Customer object I want, or it returns Nothing. Checking for nothing, and if so, instantiating a new instance of the Customer object, and adding it to the DataContext, and then changing values via properties.<br /><br />It's clean and straightforward, and utterly awesome.

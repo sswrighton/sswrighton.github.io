@@ -1,0 +1,14 @@
+---
+layout: post
+title: Stored Procedures v. Inline SQL
+date: '2007-05-25T08:35:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- Oracle
+- SQL Server
+modified_time: '2007-05-25T08:50:37.540-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-2009117722398020104
+blogger_orig_url: https://programmer.wrighton.org/2007/05/stored-procedures-v-inline-sql.html
+---
+
+One of my coworks loves his stored procedures, and this is the coworker that set up the SOP for my current project. Which of course means that everything is done using stored procedures.<br /><br />And of course, this is also Oracle back end for a .NET front end which makes it even so much better.<br /><br />Which of course means that I'm now writing lots and lots of stored procedures for Oracle to do even the simplest query such as straight SELECT by ID.<br /><br />Now, I can see the benefits to using stored procedures, things such as not needing to recompile to make changes to your data access and less round trips to the data server.<br /><br />Yet, I don't think that those benefits outweigh the costs of using them.<br /><br />If I was using SQL Server, I could just open up the stored procedure in Visual Studio (especially 2005) and make the changes there. Yet, for Oracle I have to open the file in some other editor (or I could use VS) such as Notepad++ and then log into SQL PLUS. Make the changes in Notepad++ and then type this long string of characters to make the changes onto the server.<br /><br />Frankly, I see nothing wrong with having inline SQL. It makes things easier to read and maintain.<br /><br />And frankly, with things like SQL Server using JIT compilation in their 2005 version, it's not even that much of an decrease performance wise over stored procedures.<br /><br />As for the editing of things. I have found that it's rare that I need to make changes to the underlying data stream and not make changes to the compiled code that uses that stream.<br /><br />Now, do note that I'm not saying that we should abandon all stored procedures and use only inline SQL. That's just silly. There are things that would be insane to do using inline SQL just because of their complexity.<br /><br />Yet at the same time, it's stupid to have an INSERT/UPDATE statement (or even worse, a simple SELECT) in a procedure just because you want everything to be stored procedures.

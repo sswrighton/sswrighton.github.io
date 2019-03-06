@@ -1,0 +1,15 @@
+---
+layout: post
+title: Binary Encoded Strings & Zebra printers....
+date: '2007-07-30T13:24:00.001-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- programming
+- VB.Net
+modified_time: '2007-07-30T13:33:18.492-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-2738788481626038535
+blogger_orig_url: https://programmer.wrighton.org/2007/07/binary-encoded-strings-zebra-printers.html
+---
+
+We built a little application which talks to UPS via XML to print out their shipping labels. Well, until a few days ago, this portion of the application worked perfectly, and we had never had any troubles with it. Basically, all of a sudden, the printer stopped printing the labels.<br /><br />So I spent a few days hunting through the logic looking for a problem. Didn't find a thing wrong.<br /><br />Then I checked the Application Log, hunting for any errors listed. Nothing.<br /><br />Sent the XML messages that I send/receive off to UPS. Still nothing wrong.<br /><br />Today, I pulled out the relevant bits of program, and toss it into a new app, just to print these labels. No XML communication. No XML Parsing. I supply the base64 encoded string to the app, and it converts it and prints it.<br /><br />So, what do I get? Nothing.<br /><br />Finally, I try sending printer codes without conversion. Again, nothing.<br /><br />Of course all of these things are done using the Zebra's programming codes for the Thermal 2844. Basically, I have to open the port and then write out to it directly.<br /><br />Alternatively, whenever I open the printer through traditional .NET printing classes and print using those, then it works perfectly, and the printer obediently spits out the text as ordered.<br /><br />I am now, officially, smacking my head up against the wall. And of course, Google is less than useless for this.

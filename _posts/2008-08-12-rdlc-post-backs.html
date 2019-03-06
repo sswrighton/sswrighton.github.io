@@ -1,0 +1,16 @@
+---
+layout: post
+title: RDLC Post Backs
+date: '2008-08-12T16:29:00.003-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- programming
+- ASP.Net
+- RDLC
+modified_time: '2008-08-13T10:59:44.946-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-2559749046788482423
+blogger_orig_url: https://programmer.wrighton.org/2008/08/rdlc-post-backs.html
+---
+
+Now, I'm annoyed.<br /><br />I've never been overly fond of the whole Crystal Reports/MS Reporting control schemes. It's more of the fact that I just don't like reporting than anything inherently wrong with those controls.<br /><br />Yet, I'm now true and peeved concerning RDLC.<br /><br />Backstory: I'm building this report, which displays 3 levels of the application's hierarchy at a time, and that bottom level is responsible for doing the drill through effect.  Well, going from step 1 to step 2 worked perfectly fine. But stepping from 2 to 3 just cause a postback and redisplaying 2 on the first click. On the second click, the step 3 portion of the report displays correctly.  Additional playing about with the EVENT HANDLERS show that this behavior occurs regardless of which event is being fired (though some events still process).<br /><br />So, now that that huge blurb of backstory is done, I'm still stuck here trying my darnedest to figure out just what is going on.<br /><br />EDIT: <a href="http://programmer.wrighton.org/2008/08/take-that-rdlc.html">Solving problems since '77</a>.

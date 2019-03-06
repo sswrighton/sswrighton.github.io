@@ -1,0 +1,17 @@
+---
+layout: post
+title: Dynamically Generated Divs
+date: '2007-04-23T11:21:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- JavaScript
+- AJAX
+- HTML
+- ASP.Net
+- Web
+modified_time: '2007-04-23T11:25:44.589-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-6715269009295632282
+blogger_orig_url: https://programmer.wrighton.org/2007/04/dynamically-generated-divs.html
+---
+
+For my freelance project, I'm creating a bunch of HTML DIV elements and using Prototype and the Scriptaculous JavaScript library making them Drag/Droppable.<br /><br />Not a big deal, and the DIVS are being generated - and even drag/drop. But of course there are some errors. And of course, it's different ones for FireFox and IE.<br /><br />In IE, the classes that I associate with the DIV aren't being applied for whatever reason.  Of secondary issue is that since the class is not being applied, the DIV that the elements are dropped into is not registering it as a drop.<br /><br />In FireFox, when I drop the dynamically created DIV onto the DIV that accepts it, the dynamically created DIV reverts to the top left corner of the page rather than the place where I had gotten it out from.<br /><br />So, I get to do a decent amount of research in the upcoming short term. Yeah me.

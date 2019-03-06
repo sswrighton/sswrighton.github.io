@@ -1,0 +1,17 @@
+---
+layout: post
+title: '"Most Recently Used" Menu List'
+date: '2007-02-01T08:10:00.000-06:00'
+author: Stephen Wrighton
+tags:
+- User Interface
+- Link
+- ".NET"
+- programming
+- Usability
+modified_time: '2007-02-01T08:18:36.172-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-5763740586318000181
+blogger_orig_url: https://programmer.wrighton.org/2007/02/most-recently-used-menu-list.html
+---
+
+There are a few gaping holes in the .NET Framework which Microsoft seems unwilling or unable to fill. The first of these is a framework to allow communication with smart cards. Implementing a framework utilizing the PC/SC standard should not be that hard, of course I have seen a library that does so on CodeProject, so maybe in .NET 4.0 we'll get it.<br /><br />A second hole is no <span style="font-weight: bold;">Most Recently Used</span> menu option. They provide an interface to automatically allow MDI windows to be populated under a <span style="font-weight: bold;">WINDOW</span> menu, but for whatever reason you have to design and build a system for MRU.<br /><br />And yes, a MRU is a very, very important user interface component. Such things makes application which open files much, much easier to use. I often find myself using the MRU on Visual Studio, Office, and the one which Windows provides on the Start menu. I really do not understand why this type of menu option was left out of the Framework.<br /><br />Of course, since I'm a programmer, I'm lazy and went looking for one before I spend hours on end building one (hey, why re-invent the wheel?).<br /><br />Well, CodeProject came to the rescue, and thanks to one Joe Woodbury over there, I now have a nifty <a href="http://www.codeproject.com/csharp/mrutoolstripmenu.asp">MRU menu class</a>. That particular version is for .NET 2.0, but Joe initially built that class for .NET 1.1, this is just an updated version using the new menu structures.<br /><br />I plugged this into my application, and after a few minutes of poking and prodding at the demo, the application I'm working on has a handy, dandy MRU. Thanks, Joe!

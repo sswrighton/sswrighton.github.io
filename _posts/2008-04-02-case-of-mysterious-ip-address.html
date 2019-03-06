@@ -1,0 +1,15 @@
+---
+layout: post
+title: The Case of the Mysterious IP Address
+date: '2008-04-02T08:25:00.002-05:00'
+author: Stephen Wrighton
+tags:
+- ASP.Net
+- Usability
+- Misc
+modified_time: '2008-06-02T14:54:14.086-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-6175288570196392052
+blogger_orig_url: https://programmer.wrighton.org/2008/04/case-of-mysterious-ip-address.html
+---
+
+All right, sometimes I think people do things just because they're stupid. Unfortunately, it will on occasion be people in my profession. I got a IM a week or two ago from a friend who had a friend who needed a bit of work down for his website. So I looked into it.<br /><br />The primary issue with the website was that he was getting errors on almost all of his pages. Looking at them, I quickly realized that they were the pages which were served from the database.<br /><br />Upon further research, I discovered that the database was hard-coded into the Web.Config file as an IP Address.<br /><br />As far as I can tell, that IP address doesn't serve a database. If it does, either the database has been destroyed or the account has been disabled.<br /><br />Anyways, it's clear that the account cannot log into the datastore to retrieve the user's content.<br /><br />Now, as a software professional, this throws up major, major red flags in my mind. While I retain the rights to any software which I create, the data that is used by my software is, and always will be my user's. At no point should my user not be able to get at their data due to my policies.<br /><br />Which is the case here.<br /><br />So, I went and fixed the issues--mainly be creating hard-coded pages where the dynamically served ones had been.<br /><br />Then to just take the proverbial cake, I tried to grab a copy of the website so I could open it up in my instance of Visual Studio and compile things for more efficient use by IIS and to fix some errors that were going on in the photo gallery software. This led me to discover that the photo gallery is some odd-ball, custom component, where the source code was hiding elsewhere.<br /><br />So, not only did I get the chance to tell this guy that his web developer/host company managed to lose his data for him (which he really liked his website copy) but I was going to have to rebuild his photo gallery to make the errors it was displaying go away.<br /><br />You can imagine the joy said individual had when hearing this. If the original developer wasn't just ignoring his phone calls, emails and letters, I'm certain he'd have gotten his ear chewed off. Truth be told, I was perfectly willing to do the chewing for the guy.<br /><br />It's companies and developers like that that give us all bad names.

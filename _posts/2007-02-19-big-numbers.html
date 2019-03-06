@@ -1,0 +1,14 @@
+---
+layout: post
+title: Big Numbers
+date: '2007-02-19T07:41:00.000-06:00'
+author: Stephen Wrighton
+tags:
+- programming
+- VB.Net
+modified_time: '2007-02-19T22:10:51.360-06:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-4139074290761107290
+blogger_orig_url: https://programmer.wrighton.org/2007/02/big-numbers.html
+---
+
+I've struck up against a sort of wall in VB.Net.  In one of my projects, I'm having to do math calculations on extremely large numbers (we're talking something like the result from the math operation: 5!/(26!-5!)*5! ).<br /><br />As one might expect that gives overflow compiler errors for Integers, Long and Doubles.  Reals just gives a decimal number.<br /><br />So where does that leave me? Well it leaves me coming up with a class or method to perform math functions on large numbers when they're represented as strings.<br /><br />This isn't as hard as it really sounds, for the basics of numbers is that 123 is actually 1*10^2+2*10+3*1 (for base 10 numbers, for other bases, change the 10 to whatever base you're trying to work in). Of course this is not nearly as simple as I'm probably making it sound. Regardless, I'll probably search for a working .NET implementation of this before I actually bother to build it, I just wished Microsoft had stuck it into VB.Net is all.<br /><br />If anyone has any suggestions, I'd be more than willing to take them.<br /><br /><span style="font-weight: bold;">EDIT:</span> After a bit of searching, I first found <a href="http://members.cox.net/mitselplik/lint/lint.shtml">Lint: Large Integer Object Library</a>. A C++ library which showed a decent amount of promise. Only problem is that it would not compile in .NET and I didn't feel up to spending the time figuring out why (though that may be a project for a later date).  The other library of promise is the <a href="http://www.codeproject.com/useritems/BN.asp">BigNumber </a>library. It's a C# library for large numbers and worked quite well. There's a few things I would like to see added to this (such as inherent support for math operations between BigNumbers and other data types such as integers), and while there are some operations that could be improved a bit in terms of speed and efficenciency, overall I'm happy.

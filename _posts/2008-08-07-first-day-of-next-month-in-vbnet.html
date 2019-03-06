@@ -1,0 +1,16 @@
+---
+layout: post
+title: First Day of Next Month in VB.Net
+date: '2008-08-07T19:15:00.001-05:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- programming
+- VB.Net
+- Coding
+modified_time: '2008-08-07T19:15:09.035-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7913329720329633277
+blogger_orig_url: https://programmer.wrighton.org/2008/08/first-day-of-next-month-in-vbnet.html
+---
+
+This is not exactly that hard of a thing, it's just something that I've found myself doing quite a bit in one of my current projects, and I thought of this nice, easy way to do it which I don't want to lose.<br /><br />Previously to do this, I'd add a month to the current date, use that date object to get the month as integer, build the new date as a string, and then cast said string to a <span style="font-weight: bold;">DateTime </span>object.<br /><br />That's a lot of steps for what should fundamentally be a <span style="font-style: italic;">simple </span>exercise.<br /><br />Well, it is; provided you don't do it how I was.  Check out this snippet of code:<blockquote>Now.AddDays((Now.Day - 1) * -1).AddMonths(1)</blockquote>Beautiful huh?  What's happening here is that I'm using the NOW function to return a date, I am then subtracting the current day-1 from that date object. What that works out to is as follows: if today's the 15th, then by plugging into the AddDays function 15-1*-1 I'm literally subtracting 14 days from the 15th, which leaves us with the 1st.  Pretty huh?<br /><br />Once I got to the first of the current month, I then add a month to that date, which will return the first of the next month.

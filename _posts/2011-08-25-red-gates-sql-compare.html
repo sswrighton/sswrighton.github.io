@@ -1,0 +1,14 @@
+---
+layout: post
+title: Red Gate's SQL Compare
+date: '2011-08-25T17:30:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- Software
+- SQL Server
+modified_time: '2011-08-25T17:30:00.412-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-396657938670702516
+blogger_orig_url: https://programmer.wrighton.org/2011/08/red-gates-sql-compare.html
+---
+
+I have a new tool in my toolbox of things I get to play--while being paid to do so.&nbsp; This one is the SQL Compare utility from Red Gate.&nbsp;<br /><br />This tool is designed to allow a user to compare--and update-- the schema's between two disparate databases.<br /><br />Which all I can say in regards to this is a hearty YAY!<br /><br />After all, consider the project upon which I'm currently working, which is our CloudBuster Web Framework system. This project is basically the love-child between a standard .NET CRM utility and SharePoint.&nbsp;&nbsp; It's a massive undertaking in Visual Studio, with roughly 20 discrete projects hiding within it, all as optimized for genericacy and ease of updating and extending as I can make them.<br /><br />Anyways, we have roughly 25 clients on this framework so far. Some using it as internal intranets (the Sharepoint market space) and others using it as a CRM tool (the DotNetNuke/Joomla market space).<br /><br />And this is while I'm performing active maintenance and development making the system better and more robust, and have more functions and all that sort of good jazz.<br /><br />But, the point here is that that's roughly 25 databases that need to be synchronized every time I make a change to my development database or add in a new functionality.&nbsp; And while the code base works fine for either database, it's a matter of allowing new functionality, even as older code gets refactored into newer and better paradigms that drive this need to occasionally synchronize database schemas.&nbsp; Previously, this involved scripting out all the changes I could find between my development database and one of the in-production ones, and then running that script against every database, praying that a) I caught all the changes and b) none of these missing changes were breaking.&nbsp; This meant visually comparing every database structure in every client database.&nbsp; A process that took roughly 6 hours when I had to perform it against 15 databases back in May.<br /><br />Well, I got SQL Compare, and was able to run it against all 25 databases over the course of 2 hours.&nbsp; Two hours which included time to run backups of every database, as well as checking each client's application both before and after the update.<br /><br />Fun, fun fun! 

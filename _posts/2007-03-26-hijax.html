@@ -1,0 +1,15 @@
+---
+layout: post
+title: HIJAX
+date: '2007-03-26T09:22:00.000-05:00'
+author: Stephen Wrighton
+tags:
+- programming
+- AJAX
+- Web
+modified_time: '2007-03-26T09:29:35.123-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-2830013025753901020
+blogger_orig_url: https://programmer.wrighton.org/2007/03/hijax.html
+---
+
+Jeremy Keith presented something regarding AJAX at XTECH 2006 entitled <a href="http://domscripting.com/presentations/xtech2006/">HIJAX: Progressive Enhancement with AJAX</a>.<br /><br />I've just recently found the slides to the presentation and must say that I like the concept a lot.<br /><br />A whole lot.<br /><br />In a nutshell, what Mr. Keith advocates is that we develop webapplications with AJAX in mind, but in a traditional postback form. Minus any form of JavaScripting (such as .NET's Link buttons with are traditional <span style="font-weight: bold;">A</span> tags but with a JavaScript function as the <span style="font-weight: bold;">HREF</span>).<br /><br />Then once the application is built, go back and build JavaScript which hijacks the application's links and button submissions and passing the data through the XMLHttpRequest object.<br /><br />The whole purpose of the thing is to ensure that the application degrades well in downlevel browsers and/or those browsers with JavaScript turned off.<br /><br />I suggest you go look at them slideshow, it's a great working platform for rolling out AJAX applications.

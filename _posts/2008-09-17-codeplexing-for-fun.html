@@ -1,0 +1,16 @@
+---
+layout: post
+title: Codeplexing for Fun
+date: '2008-09-17T00:01:00.003-05:00'
+author: Stephen Wrighton
+tags:
+- programming
+- VB.Net
+- Windows
+- eComic
+modified_time: '2008-09-17T08:55:24.395-05:00'
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-4631420024156553499
+blogger_orig_url: https://programmer.wrighton.org/2008/09/codeplexing-for-fun.html
+---
+
+And if only this were for profit as well..<br /><br />Anyways, this past weekend, I had some spare time on my hands. And what better way to fill that spare time than to purchase lots and lots of SF/Geek memorabilia.<br /><br />But, since I don't have enough money to do all of that, I decided to just wrote some code instead.<br /><br />The thing is, I coupled two reasons to code into a single project.<br /><br />The first reason is that I was wanting to use the ZIP libraries in .NET in a WindowsForms environment. I know I'll be dealing with them soon professionally, so I wanted to figure out how to use them, and get that out of the way.<br /><br />The second thing is that I have an application I use called CDisplay, which is a sequential image viewer, which I want to extend the functionality for.  Basically, I want to be able to create a "Reading List" which allows me to pick and choose which archives I want to view, and the order I want to view them in.<br /><br />Why? Well, I use this to read comics. I'm a geek, it's allowed. Now, if I wanted to read say the "<a href="http://en.wikipedia.org/wiki/Fatal_Attractions">Fatal Attractions</a>" crossover from the late '90's X-Men, then I'd have to read the following comics in this order:<br /><ol><li>X-Factor (Volume 1) #92</li><li>X-Force (Volume 1) #25</li><li>Uncanny X-Men #304</li><li>X-Men (Volume 2) #25</li><li>Wolverine (Volume 2) #75</li><li>Excalibur (Volume 1) #71</li></ol>Now, if I've scanned every issue of my comic collection into my PC, and followed a wise naming convention, then the the disparate archive files would be called:<br /><ol><li>xfactor_v01_0092</li><li>xforce_v01_0025</li><li>uncannyxmen_v01_0304</li><li>xmen_v02_0025</li><li>wolverine_v02_0075</li><li>excaliber_v01_0071</li></ol>The problem here is that these guys are NOT sequential. When I would open <span style="font-weight: bold;">xfactor_v01_0092</span>, the next logical file would be<span style="font-weight: bold;"> x</span><span style="font-weight: bold;">factor_v01_0093</span> not <span style="font-weight: bold;">xforce_v01_0025</span>. The <span style="font-weight: bold;">xforce_v01_0025 </span>is only the next logical file in the context of the "Fatal Attractions" storyline.<br /><br />Hence the need for a reading list for this thing.<br /><br />So, there you have it. I'm in the process of building this little application because, well, I'm crazy that way, and feel the need to ramble on about it here on this blog while doing so.<br /><br />Without further ado, here's my codeplex site: <a href="http://www.codeplex.com/ecomic">http://www.codeplex.com/ecomic</a>

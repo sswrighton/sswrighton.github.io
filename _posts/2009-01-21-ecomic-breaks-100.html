@@ -1,0 +1,18 @@
+---
+layout: post
+title: eComic breaks 100!
+date: '2009-01-21T21:21:00.001-06:00'
+author: Stephen Wrighton
+tags:
+- ".NET"
+- programming
+- Coding
+- eComic
+- Misc
+modified_time: '2009-01-21T21:21:00.195-06:00'
+thumbnail: http://4.bp.blogspot.com/_0dC8-RtLatg/SXc99Ycp35I/AAAAAAAAArE/fjRuPfzBiGs/s72-c/ecomic100%2B.png
+blogger_id: tag:blogger.com,1999:blog-947968907697915479.post-7012311282952847179
+blogger_orig_url: https://programmer.wrighton.org/2009/01/ecomic-breaks-100.html
+---
+
+<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_0dC8-RtLatg/SXc99Ycp35I/AAAAAAAAArE/fjRuPfzBiGs/s1600-h/ecomic100%2B.png"><img style="margin: 0pt 0pt 10px 10px; float: right; cursor: pointer; width: 200px; height: 156px;" src="http://4.bp.blogspot.com/_0dC8-RtLatg/SXc99Ycp35I/AAAAAAAAArE/fjRuPfzBiGs/s200/ecomic100%2B.png" alt="" id="BLOGGER_PHOTO_ID_5293768011741257618" border="0" /></a>I stopped by CodePlex earlier and discovered a happy fact: the latest version of <a href="http://www.codeplex.com/ecomic">eComic</a> (the WPF version) has over a hundred downloads now.   Insert an appropriately scary version of the happy dance; maybe the one from the op/ed of <span style="font-style: italic;">The Melancholy of Suzumiya Haruhi</span>.<br /><br />In truth, I'm quite happy, as this means that the application is being utilized.  While not every one of those downloads is of the executable (61 of them), the rest is of the source code; so even if folks aren't using the application as an image viewer, maybe they're using it to help them learn more about WPF.<br /><br />Which I'm also happy over.<br /><br />Regardless, I do have an update to eComic in the works, but I'm still working on the new functionality that I'm trying to implement into it. Mainly, this will be creating the CBZ archives (CBZ only, I'm not springing for a RAR license to allow creation of CBR files).<br /><br />Other functionality I'm working on are zooming, and filters for the image display, and either a slider control or a numeric selection control for navigation between pages.<br /><br />The final functionality I'm implementing here is to make this a bit more thread friendly, in how it operates.  Currently, there's a slight pause when you first open up an archive, and it's a slightly longer one when the archive is slightly larger (example: whole volumes of a manga take nearly a minute, while a single chapter between 20 &amp; 30 seconds). This lag, where the UI is unresponsive, and I fear close to failure, is unacceptable; and I want it gone!<br /><br />After all, I don't want Mr. Bigglesworth to get upset over UI lag.
