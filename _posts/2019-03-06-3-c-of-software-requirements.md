@@ -1,4 +1,34 @@
-I have a tendency to want everyone around me to be able to write effective requirements documentation. I don't necessarily know why I'm like this, but I use those skills constantly in an effort to more or less train people in how they think, write and talk. Recently though, I've taken to proactively training our support staff person in how to write requirements.  He interacts directly with the end users for one of our products, and as such often takes in the initial requests in relation to bugs, issues, and changes.  Having him know how these items should be documented, as well as how to ask questions of the end-users, can only help with how those items are built, can only be a good thing in my opinion. Additionally, since he's intimately aware of both the production system, as well as the support systems, he has a good idea of how things need to change conceptually, even though he lacks in the programmatic knowledge in which those changes would be carried out.  And I sometimes wonder if that wouldn't help those who write software requirements, but I digress. Recently though, he had an idea on an improvement for the support system he uses, in which he would desire to make it easier to move work items from one user to a different user.  So, while bleeding on his documents using the track changes functionality from MS Word, I told him about the three C's of Software Requirements.  In my opinion, these are the most important concepts to remember while defining requirements no matter the detail levels (Originating versus system versus detailed design) or even problem domain.  
+---
+layout: post
+title:  "3 C's of Software Requirements"
+date: "2019-03-06 15:40:00"
+updated: "2019-03-03 15:46:00"
+permalink: "/2019/03/3-c-of-software-requirements.html"
+author: Stephen Wrighton
+description: 
+categories: 
+tags: [Programming, Software Requirements]
+author: 
+    name: "Stephen Wrighton"
+    url: "https://github.com/sswrighton"
+    image: "https://www.gravatar.com/avatar/53a4066fb888b4a54fa1e650945e34a8?s=64&d=identicon&r=PG"
+---
+
+I have a tendency to want everyone around me to be able to write effective requirements documentation. I don't necessarily know why I'm like this, but I use those skills constantly in an effort to more or less train people in how they think, write and talk. 
+
+Recently though, I've taken to proactively training our support staff person in how to write requirements.  
+
+He interacts directly with the end users for one of our products, and as such often takes in the initial requests in relation to bugs, issues, and changes.  
+
+Having him know how these items should be documented, as well as how to ask questions of the end-users, can only help with how those items are built, can only be a good thing in my opinion. 
+
+Additionally, since he's intimately aware of both the production system, as well as the support systems, he has a good idea of how things need to change conceptually, even though he lacks in the programmatic knowledge in which those changes would be carried out.
+
+And I sometimes wonder if that wouldn't help those who write software requirements, but I digress. 
+
+Recently though, he had an idea on an improvement for the support system he uses, in which he would desire to make it easier to move work items from one user to a different user.  
+
+So, while bleeding on his documents using the track changes functionality from MS Word, I told him about the three C's of Software Requirements.  In my opinion, these are the most important concepts to remember while defining requirements no matter the detail levels (Originating versus system versus detailed design) or even problem domain.  
 
 	1. Clear
 	2. Concise 

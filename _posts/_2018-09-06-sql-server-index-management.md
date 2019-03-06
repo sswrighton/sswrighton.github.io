@@ -4,6 +4,7 @@ title:  "SQL Server Index Management"
 date: "2019-09-06 19:00:00"
 updated: "2019-03-03 15:46:00"
 permalink: "/2018/09/sql-server-index-management.html"
+author: Stephen Wrighton
 description: 
 categories: 
 tags: [SQL, SQL Server]
