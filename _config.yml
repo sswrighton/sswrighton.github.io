@@ -1,7 +1,7 @@
 title: A Programmer's Dream
 name: A Programmer's Dream
-author: sswrighton
-email: your-email@domain.com
+author: Stephen Wrighton
+email: stephen@wrighton.org
 description: > # this means to ignore newlines until "baseurl:"
   Yet more Geek ruminations to clutter up the internets.
 about: >
@@ -20,9 +20,9 @@ future: false
 
 rtl: false
 owner:
-  name:           sswrighton
+  name:           Stephen Wrighton
   avatar:         "https://www.gravatar.com/avatar/53a4066fb888b4a54fa1e650945e34a8?s=64&d=identicon&r=PG"
-  email:          "sswrighton@gmail.com"
+  email:          "stephen@wrighton.org"
   # Social networking links used in footer. Update and remove as you like.
   twitter: kidananubix
   github: https://github.com/sswrighton

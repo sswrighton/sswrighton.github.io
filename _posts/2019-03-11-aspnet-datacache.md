@@ -2,6 +2,7 @@
 layout: post
 title: "ASP.Net DataCache"
 date: "2019-03-11 19:00:00"
+updated: "2019-03-11 19:15:00"
 permalink: "/2019/03/aspnet-datacache.html"
 author: Stephen Wrighton
 description:
