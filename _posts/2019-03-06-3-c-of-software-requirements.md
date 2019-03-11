@@ -7,11 +7,7 @@ permalink: "/2019/03/3-c-of-software-requirements.html"
 author: Stephen Wrighton
 description: 
 categories: 
-tags: [Programming, Software Requirements]
-author: 
-    name: "Stephen Wrighton"
-    url: "https://github.com/sswrighton"
-    image: "https://www.gravatar.com/avatar/53a4066fb888b4a54fa1e650945e34a8?s=64&d=identicon&r=PG"
+tags: [Programming, Software Requirements] 
 ---
 
 I have a tendency to want everyone around me to be able to write effective requirements documentation. I don't necessarily know why I'm like this, but I use those skills constantly in an effort to more or less train people in how they think, write and talk. 
