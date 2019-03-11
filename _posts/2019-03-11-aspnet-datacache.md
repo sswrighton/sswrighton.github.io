@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "SQL Server Index Management"
+title: "ASP.Net DataCache"
 date: "2019-03-11 19:00:00"
-permalink: "/2019/03/aspnet-datacache.html
+permalink: "/2019/03/aspnet-datacache.html"
 author: Stephen Wrighton
 description:
 categories:
