@@ -534,3 +534,22 @@ code.html span.doctype {
 .user-avatar {
   border-radius: 12px;
 }
+
+
+/** 
+Tag Elements
+*/
+.tag_list a, .tag_list a:visited, .tag_list a:active { 
+  background:#eee;
+  border:1px solid #ccc;
+  border-radius:5px;
+  text-decoration:none;
+  padding:3px;
+  margin:3px;
+  text-transform:uppercase;
+  }
+   
+  .tag_list a:hover { 
+  background:#a8281a;
+  color:#FFF;
+  }

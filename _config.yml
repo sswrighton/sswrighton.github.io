@@ -16,6 +16,7 @@ highlighter: rouge
 plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
 
 paginate: 4
+future: false
 
 
 rtl: false
@@ -33,7 +34,9 @@ owner:
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: UA-1739066-2
+google_adsense: ca-pub-3572508565773804
 
 show_excerpts: true # set to false to remove excerpts on the homepage
 
-
+# Where are tags and categories displayed
+tag_page: '/tags/'
