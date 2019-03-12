@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
+
+{% if page.image.path %}
+  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{page.image.path | relative_url}}}" style="height:600px;" />
+  
+{% endif %}
+
 <h2 >{{ page.title }}</h2>
 <p class="post-date">
 {% if page.author %}

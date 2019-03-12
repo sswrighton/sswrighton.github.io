@@ -7,6 +7,7 @@ permalink: "/2019/03/aspnet-datacache.html"
 author: Stephen Wrighton
 image:
     thumb: datacache.jpg
+    path: "/images/datacache.jpg"
 description: Discovering the Datacache for asp.net
 categories:
 tags: [ASP.Net, IIS, Data, Cache]
