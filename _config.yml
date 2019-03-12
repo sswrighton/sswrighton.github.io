@@ -8,6 +8,7 @@ about: >
     Yet more Geek ruminations to clutter up the internets
  
 master_repo: false
+baseurl:
 url: "https://programmer.wrighton.org"
 markdown: kramdown
 highlighter: rouge
