@@ -5,7 +5,9 @@ date: "2019-03-11 19:00:00"
 updated: "2019-03-11 19:15:00"
 permalink: "/2019/03/aspnet-datacache.html"
 author: Stephen Wrighton
-description:
+image:
+    thumb: datacache.jpg
+description: Discovering the Datacache for asp.net
 categories:
 tags: [ASP.Net, IIS, Data, Cache]
 ---
@@ -75,3 +77,7 @@ This is data that changes, but not overly fast. So, having it on a 30 second cac
 And that just works. 
 
 And I always get the proper CSS files after maintenance cycles now.
+
+
+
+Photo by [Jan Antonin Kolar 🇨🇿](https://unsplash.com/@makropulos) on [Unsplash](https://unsplash.com)

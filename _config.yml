@@ -7,10 +7,13 @@ description: > # this means to ignore newlines until "baseurl:"
 about: >
     Yet more Geek ruminations to clutter up the internets
 
+baseurl: "http://programmer.wrighton.org"
 master_repo: false
 url: "http://programmer.wrighton.org"
 markdown: kramdown
 highlighter: rouge
+
+SocialDefaultLogo: tcardbase.png
 
 plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
 
