@@ -3,7 +3,9 @@ layout: default
 ---
 
 {% if page.image.path %}
-  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{page.image.path | relative_url}}" alt='Hero Image' style="max-height: 45vh" />  
+<div class='hero'>
+  <img class='hero-image' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{page.image.path | relative_url}}" alt='Hero Image'  />  
+</div>
 {% endif %}
 
 <h2 >{{ page.title }}</h2>
