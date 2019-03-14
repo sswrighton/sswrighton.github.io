@@ -1,0 +1,16 @@
+<figure class="image">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+        data-src="{{ include.url }}" 
+        alt="{{ include.description }}">
+    {% if include.description %}
+    <figcaption>{{ include.description }}</figcaption>
+    {% endif %}
+</figure>
+
+
+{% comment %}
+=======================
+
+{% include image.html url="/images/my-cat.jpg" description="My cat, Robert Downey Jr." %}
+=======================
+{% endcomment %}
