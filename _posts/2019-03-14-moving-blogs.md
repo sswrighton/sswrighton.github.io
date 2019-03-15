@@ -8,8 +8,8 @@ description: My switch from Blogger to github pages.
 image:
     thumb: 201903changeblog.jpg
     path: "/images/201903changeblog.jpg"
-    sourceName: Aaron Burden
-sourceLink: "https://unsplash.com/@aaronburden"
+    sourcename: Aaron Burden
+    sourcelink: "https://unsplash.com/@aaronburden"
 categories:
 tags: [blog, writing]
 ---
@@ -34,7 +34,7 @@ But, it's fast.
 And it passes the lighthouse audits with what are effectively flying colors.  Compare those values with the ones from where I was reviewing a potential client's website for re-write. 
 
 <figure class='oncenter'>
-<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{"/images/lighthouse-business.jpg" | relative_url }}" alt="Lighthouse Audit of a random business website" />
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{"/images/lighthouse_business.jpg" | relative_url }}" alt="Lighthouse Audit of a random business website" />
 <figcaption>Lighthouse Audit of a random business</figcaption>
 </figure>
 
