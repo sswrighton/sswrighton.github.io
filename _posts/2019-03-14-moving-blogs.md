@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Moved Blog Hosts"
-date: "2019-03-18 19:00:00"
+date: "2019-03-14 19:00:00"
 permalink: "/2019/03/moved-blog-hosts.html"
 author: Stephen Wrighton
 description: My switch from Blogger to github pages.
