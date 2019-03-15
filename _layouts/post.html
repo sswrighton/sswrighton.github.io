@@ -19,6 +19,15 @@ Posted by {{page.author }} on
 {{ content }}
 </div>
 
+{% if page.image.sourceName %}
+<div style='margin-top:10px; margin-bottom:15px;'>
+  <p>Image provided by <a href='{{image.sourceLink}}'  rel="noopener" title='Source of Hero Image' >
+    {{image.sourceName}}
+  </a></p>
+</div>
+{% endif %}
+
+
 {% if site.owner.twitter %}
     <div class="keep-in-touch">
       <p>
