@@ -2,7 +2,8 @@
 layout: post
 title: "3 C's: Conciseness in Requirements"
 date: "2019-03-18 19:00:00"
-permalink: "/2019/03/conciseness-in-requirements.html
+update: "2019-03-18 20:14:00"
+permalink: "/2019/03/conciseness-in-requirements.html"
 author: Stephen Wrighton
 description: Part two of 3 important concepts of software requirements.
 image:
