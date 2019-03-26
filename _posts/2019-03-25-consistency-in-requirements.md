@@ -2,12 +2,13 @@
 layout: post
 title: "Consistency in Requirements"
 date: "2019-03-25 19:00:00"
+update: "2019-03-25 20:10:00"
 permalink: "/2019/03/consistency-in-requirements.html"
 author: Stephen Wrighton
 description: Part 3 of 3 important concepts of software requirements.
 image:
-    thumb: 201903consistent.jpg
-    path: "/images/201903consistent.jpg"
+   thumb: 201903consistent.jpg
+   path: "/images/201903consistent.jpg"
    sourcename: Alvaro Reyes
    sourcelink: https://unsplash.com/@alvaroreyes
 categories:
