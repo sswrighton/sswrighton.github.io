@@ -2,7 +2,7 @@
 layout: post
 title: "Consistency in Requirements"
 date: "2019-03-25 19:00:00"
-permalink: "/2019/03/consistency-in-requirements.html
+permalink: "/2019/03/consistency-in-requirements.html"
 author: Stephen Wrighton
 description: Part 3 of 3 important concepts of software requirements.
 image:
