@@ -8,8 +8,8 @@ author: Stephen Wrighton
 description: Implementing RECAPTCHA on a WebForms login screen
 categories:
 image:
-    thumb: 201904letters.jpg
-    path: "/images/201904letters.jpg"
+   thumb: 201904letters.jpg
+   path: "/images/201904letters.jpg"
    sourcename:  Amador Loureiro
    sourcelink:  https://unsplash.com/@amadorloureiroblanco
 tags: [ASP.Net, WebForms, Google, reCaptcha]
