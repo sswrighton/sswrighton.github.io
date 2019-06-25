@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Cloud Dangerss"
+title: "Cloud Dangers"
 date: "2019-06-18 19:00:00"
-updated: "2019-06-18 20:40:00"
+updated: "2019-06-24 20:40:00"
 permalink: "/2019/06/cloud-dangers.html"
 author: Stephen Wrighton
 description: One of the reasons I do not use Public Cloud Systems for necessary or privilged information
