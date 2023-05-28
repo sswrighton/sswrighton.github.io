@@ -1,18 +1,17 @@
 ---
 layout: post
-title: "1- Reasons to Modernize ASP.Net WebForms"
+title: "10 Reasons to Modernize ASP.Net WebForms"
 date: "2023-05-28 12:00:00"
-updated: "2023-05-28 12:00:00"
+updated: "2023-05-28 15:00:00"
 permalink: "/2023/05/10-reasons-to-update-webforms.html"
 author: Stephen Wrighton
-description: 10 Reasons to Modernize ASP.Net Webforms
+description: Ten reasons why your business should consider modernizing their ASP.NET WebForms applications
 categories:
 image:
    thumb: 10reasonswebforms.png
    path: "/images/10reasonswebforms.png"
 tags: [.Net Framework, ASP.Net, WebForms, .Net Core]
 ---
-10 Reasons to Modernize ASP.Net WebForms
 
 Ten reasons why your business should consider modernizing their ASP.NET WebForms applications:
 
