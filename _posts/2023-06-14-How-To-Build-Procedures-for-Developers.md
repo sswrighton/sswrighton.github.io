@@ -8,8 +8,8 @@ author: Stephen Wrighton
 description: Navigating the labyrinth of software development can be challenging without a clear roadmap, making the availability of best practices and procedural documentation critical for every developer. Whether you're a team leader striving to streamline your workflow, or a new developer seeking to understand the ropes, these guidelines serve as invaluable tools.
 categories:
 image:
-   thumb: Beatriz-Pérez-Moya-XN4T2PVUUgk.png.png
-   path: "/images/Beatriz-Pérez-Moya-XN4T2PVUUgk.png.png"
+   thumb: Beatriz-Pérez-Moya-XN4T2PVUUgk.png
+   path: "/images/Beatriz-Pérez-Moya-XN4T2PVUUgk.png"
    sourcename:  Shot by Beatriz Pérez Moya
    sourcelink:  https://unsplash.com/de/@beatriz_perez
 tags: [Development, Process, Policy, Management]
