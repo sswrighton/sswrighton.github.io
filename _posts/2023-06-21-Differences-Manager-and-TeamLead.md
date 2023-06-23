@@ -2,14 +2,14 @@
 layout: post
 title: "Differences Between a Good Manager of Developers and a Good Software Developer Lead"
 date: "2023-06-21 00:00:00"
-updated: "2023-06-11 00:00:00"
+updated: "2023-06-23 00:08:00"
 permalink: "/2023/06/Difference-Manager-and-Software-Lead.html"
 author: Stephen Wrighton
 description: The differences between a good manager of developers and a good software developer lead can be vital to the success of a tech-based company. This comprehensive guide highlights these differences, providing a roadmap to understanding how each role contributes to the organization's growth.
 categories:
 image:
-   thumb: OmarPrestwich-0TQa-Ur6Zqg.png.png
-   path: "/images/OmarPrestwich-0TQa-Ur6Zqg.png.png"
+   thumb: OmarPrestwich-0TQa-Ur6Zqg.png
+   path: "/images/OmarPrestwich-0TQa-Ur6Zqg.png"
    sourcename:  Shot by Omar Prestwich
    sourcelink:  https://unsplash.com/@omarprestwich
 tags: [Development, Process, Policy, Management]
