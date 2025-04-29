@@ -5,7 +5,7 @@ date: "2025-05-05 13:30:00-05:00"
 updated: "2025-05-05 13:30:00-05:00"
 permalink: "/2025/05/Reframing-ATS-Interaction.html"
 author: Stephen Wrighton
-description: There was a time when resumes were crafted solely for human eyes — when paper weight, typography, and a well-chosen phrase mattered more than algorithms or parsing engines. Today, we write for two audiences: the machine that scans for keywords and patterns, and the human who still craves a story.
+description: There was a time when resumes were crafted solely for human eyes -- when paper weight, typography, and a well-chosen phrase mattered more than algorithms or parsing engines. Today, we write for two audiences: the machine that scans for keywords and patterns, and the human who still craves a story.
 categories:
 tags: [Management, Job Search, Leadership]
 ---  
