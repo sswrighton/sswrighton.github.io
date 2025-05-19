@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-updated: "2023-06-11 11:34:00"
+updated: "2025-05-19 13:34:00"
 ---
 ## About {{ site.name }}
 

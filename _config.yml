@@ -24,13 +24,14 @@ future: false
 rtl: false
 owner:
   name:           "Stephen Wrighton"
-  avatar:         "https://programmer.wrighton.org/images/avatar2019.jpg"
-  email:          "stephen@wrighton.org"
+  avatar:         "https://programmer.wrighton.org/images/avatar2025md.png"
+  email:          "sswrighton@gmail.com"
   # Social networking links used in footer. Update and remove as you like.
   twitter: kidananubix
   github: https://github.com/sswrighton
   stackoverflow: https://stackoverflow.com/users/7516/stephen-wrighton
   linkedin: https://www.linkedin.com/in/sswrighton
+  buymeacoffee: https://www.buymeacoffee.com/sswrighton
   # For Google Authorship https://plus.google.com/authorship
   google_plus:
 

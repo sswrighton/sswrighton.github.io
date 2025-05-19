@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Why Simpler Code Ages Better Than Clever Code: Lessons From Two Decades in Development"
-date: "2025-05-05 13:30:00-05:00"
-updated: "2025-05-05 13:30:00-05:00"
+date: "2025-05-12 13:30:00-05:00"
+updated: "2025-05-12 13:30:00-05:00"
 permalink: "/2025/05/Simpler-Code-Ages-Better.html"
 author: Stephen Wrighton
 description: Early in my career, I rebuilt a wizard engine in a .NET WebForms app. It was dynamic, elegant, fast, and borderline indecipherable. It worked. But it didn’t live well. I’ve come to learn that the best code isn’t the most inventive. It’s the most understandable. Simple code invites collaboration. It survives context loss. It doesn’t need to be decoded six months later.
