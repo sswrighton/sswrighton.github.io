@@ -29,23 +29,23 @@ updated: "2025-05-19 13:34:00"
   color: #555;
   margin-bottom: 1em;
 }
-
 </style>
 
-<div class="intro-card">
+<section class="intro-card">
   <h1>Meet the MSP Assessment Tool</h1>
   <p class="lead">
     A clear, structured way to evaluate and compare Managed Service Providers — built by IT leaders who’ve been in the trenches.
   </p>
   <p><strong>Choose your Managed Service Provider with clarity, structure, and strategy.</strong><br />
 This MSP Assessment Tool gives IT leaders a proven framework to evaluate providers across 10 critical categories — empowering better decisions through real data, not gut instinct.
+</p>
   <p>
     Whether you’re searching for a new MSP or reviewing an existing one, this tool replaces guesswork with a proven framework. It gives your team the structure, language, and insight to make informed decisions — without vendor spin.
   </p>
   <p><strong>Designed for clarity. Backed by experience.</strong><br>
     Developed by technology and compliance veterans, this tool goes far beyond surface-level checklists. It's practical, field-tested, and ready for the real-world complexity of IT leadership.
   </p>
-</div>
+</section>
 
 
 <style>    
