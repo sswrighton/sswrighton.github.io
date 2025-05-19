@@ -32,8 +32,8 @@ updated: "2025-05-19 13:34:00"
 
 </style>
 
-<section class="intro-card">
-  <h1>🔍 Meet the MSP Assessment Tool</h1>
+<div class="intro-card">
+  <h1>Meet the MSP Assessment Tool</h1>
   <p class="lead">
     A clear, structured way to evaluate and compare Managed Service Providers — built by IT leaders who’ve been in the trenches.
   </p>
@@ -45,7 +45,7 @@ This MSP Assessment Tool gives IT leaders a proven framework to evaluate provide
   <p><strong>Designed for clarity. Backed by experience.</strong><br>
     Developed by technology and compliance veterans, this tool goes far beyond surface-level checklists. It's practical, field-tested, and ready for the real-world complexity of IT leadership.
   </p>
-</section>
+</div>
 
 
 <style>    
@@ -54,8 +54,7 @@ This MSP Assessment Tool gives IT leaders a proven framework to evaluate provide
   flex-direction: column;
   align-items: center;
   padding: 2em;
-}
-
+} 
 .service-card {
   background-color: #fdfdfd;
   border-radius: 10px;
@@ -64,21 +63,18 @@ This MSP Assessment Tool gives IT leaders a proven framework to evaluate provide
   max-width: 500px;
   text-align: center;
   margin-bottom: 2em;
-}
-
+} 
 .service-title {
   margin-top: 0;
   font-size: 1.6em;
   color: #333;
-}
-
+} 
 .service-description {
   font-size: 1em;
   line-height: 1.6;
   color: #555;
   margin-bottom: 1.5em;
-}
-
+} 
 .purchase-btn {
   display: inline-block;
   background-color: #ffdd00;
@@ -90,15 +86,13 @@ This MSP Assessment Tool gives IT leaders a proven framework to evaluate provide
   font-size: 1.1em;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-}
-
+} 
 .purchase-btn:hover {
   background-color: #ffc400;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
-}
-
-    </style>
+} 
+</style>
 
 <div class="services-container">
   <div class="service-card">
@@ -112,8 +106,6 @@ This MSP Assessment Tool gives IT leaders a proven framework to evaluate provide
     </a>
   </div>
 </div>
-
-
 
 
 <style>
@@ -442,9 +434,7 @@ This MSP Assessment Tool gives IT leaders a proven framework to evaluate provide
 
 
  <style>
-    
-
-    .promo-banner {
+     .promo-banner {
       background-color: #fff;
       border: 2px dashed #e74c3c;
       color: #333;
@@ -509,17 +499,15 @@ This MSP Assessment Tool gives IT leaders a proven framework to evaluate provide
   </style>
 
 <div class="promo-wrapper">
-
-<div class="promo-banner">
-    <p class="h1">🔥 75% Off Just for You!</p>
-    <p>Use the code below at checkout to claim your discount.</p>
-    <div class="promo-code">V2TUCDKC
-    <button class="copy-btn" onclick="copyCode()" title="Copy to clipboard">📋</button>
-    <span class="copy-feedback" id="copy-feedback"><br />Copied!</span>
+    <div class="promo-banner">
+        <p class="h1">🔥 75% Off Just for You!</p>
+        <p>Use the code below at checkout to claim your discount.</p>
+        <div class="promo-code">V2TUCDKC
+            <button class="copy-btn" onclick="copyCode()" title="Copy to clipboard">📋</button>
+            <span class="copy-feedback" id="copy-feedback"><br />Copied!</span>
+        </div>
+        <p class="expiry-note">*Promo code expires on June 30, 2025. Don't miss out!</p>
     </div>
-    <p class="expiry-note">*Promo code expires on June 30, 2025. Don't miss out!</p>
-
-</div>
 </div>
 
 <script>
