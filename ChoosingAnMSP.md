@@ -496,13 +496,15 @@ This MSP Assessment Tool gives IT leaders a proven framework to evaluate provide
 .copy-feedback {
   margin-left: 0.5em;
   color: #27ae60;
-  font-size: 0.9em;
+  font-size: 0.5em;
   opacity: 0;
+  visibility: hidden;
   transition: opacity 0.3s ease;
 }
 
 .copy-feedback.visible {
   opacity: 1;
+  visibility: visible;
 }
   </style>
 
@@ -513,7 +515,7 @@ This MSP Assessment Tool gives IT leaders a proven framework to evaluate provide
     <p>Use the code below at checkout to claim your discount.</p>
     <div class="promo-code">V2TUCDKC
     <button class="copy-btn" onclick="copyCode()" title="Copy to clipboard">📋</button>
-    <span class="copy-feedback" id="copy-feedback">Copied!</span>
+    <span class="copy-feedback" id="copy-feedback"><br />Copied!</span>
     </div>
     <p class="expiry-note">*Promo code expires on June 30, 2025. Don't miss out!</p>
 
