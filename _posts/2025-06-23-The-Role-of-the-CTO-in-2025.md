@@ -5,7 +5,7 @@ date: "2025-06-23 13:30:00-05:00"
 updated: "2025-06-23 13:30:00-05:00"
 permalink: "/2025/06/role-of-the-cto.html"
 author: Stephen Wrighton
-description: The CTO role has changed. It’s no longer about being the smartest engineer in the room. It’s about shaping strategy, enabling change, and building trust across every department. In my latest piece, I explore what it means to lead as a CTO in 2025: from architecture diagrams to organizational design, from writing code to writing clarity. Give it a read if you’re navigating this shift, or leading someone who is.
+description: The CTO role has changed. It’s no longer about being the smartest engineer in the room. It’s about shaping strategy, enabling change, and building trust across every department. In my latest piece, I explore what it means to lead as a CTO in 2025. From architecture diagrams to organizational design, from writing code to writing clarity. Give it a read if you’re navigating this shift, or leading someone who is.
 categories:
 tags: [CTO, Engineering Leadership, Strategy]
 ---  

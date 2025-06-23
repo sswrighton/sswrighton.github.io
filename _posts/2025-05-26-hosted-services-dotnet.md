@@ -5,7 +5,7 @@ date: "2025-05-26 13:30:00-05:00"
 updated: "2025-05-15 13:30:00-05:00"
 permalink: "/2025/05/hosted-services-dotnet.html"
 author: Stephen Wrighton
-description: Not everything that matters in software makes noise. Some of the most important things our applications do happen quietly, in the background: polling, syncing, cleaning up, keeping the lights on without ever blocking a user request or lighting up a dashboard.
+description: Not everything that matters in software makes noise. Some of the most important things our applications do happen quietly. In the background. Polling. Syncing .Cleaning up. Keeping the lights on without ever blocking a user request or lighting up a dashboard.
 categories:
 tags: [dotnet, Software Engineering, Code Quality, Software Architecture]
 ---  
