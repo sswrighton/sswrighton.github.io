@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Teaching SQL to a New Generation: How to Make Data Click"
+title: "Teaching SQL to a New Generation or How to Make Data Click"
 date: "2025-06-30 13:30:00-05:00"
 updated: "2025-06-20 13:30:00-05:00"
 permalink: "/2025/06/teaching-sql-to-new-gen.html"
