@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "The Architecture Will Outlive Youd"
+title: "The Architecture Will Outlive You"
 date: "2025-07-21 13:30:00-05:00"
-updated: "2025-07-21 13:30:00-05:00"
+updated: "2025-07-28 13:30:00-05:00"
 permalink: "/2025/07/the-architecture-will-outlive-you.html"
 author: Stephen Wrighton
 description: Most startup CTOs leave before the system does. The architecture outlives us—and our choices echo long after we're gone. It's not about picking the perfect framework. It's about clarity. Context. Kindness. I wrote about the joy of cleaning up a Laravel Commands folder, and why the culture we build matters more than the code we write.
